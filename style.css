@@ -1,0 +1,47 @@
+body {
+    margin: 0;
+    font-family: 'Proxima Nova', sans-serif;
+    background-color: #fff;
+    color: #333;
+}
+
+.container {
+    display: flex;
+}
+
+.sidebar {
+    width: 200px;
+    background-color: #000;
+    color: #00f0d9;
+    position: fixed;
+    height: 100%;
+    overflow-y: auto;
+    padding: 10px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 15px 0;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #00f0d9;
+    font-family: 'Lexend', sans-serif;
+}
+
+.main-content {
+    margin-left: 200px;
+    padding: 20px;
+    width: calc(100% - 200px);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Lexend', sans-serif;
+}
+
+/* Add any additional styling for a punk vibe here */
