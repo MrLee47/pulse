@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pulse</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Proxima+Nova&display=swap" rel="stylesheet">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Proxima Nova', sans-serif;
+            background-color: #d5f7f3; /* Light grey/desaturated seafoam green */
+            color: #000;
+        }
+
+        header {
+            width: 100%;
+            padding: 20px;
+            background-color: #fff; /* White background for header */
+            border-bottom: 5px solid #01e8d4;
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        header h1 {
+            font-family: 'Lexend', sans-serif;
+            font-size: 3em;
+            color: #01e8d4;
+            margin: 0;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0;
+            height: calc(100vh - 80px); /* Adjust height to fit within viewport minus header */
+            box-sizing: border-box;
+        }
+
+        .sidebar {
+            width: 250px; /* Fixed width for sidebar */
+            padding: 20px;
+            background-color: #f0f0f0; /* Light grey */
+            border-right: 5px solid #01e8d4;
+            box-sizing: border-box;
+            height: 100%;
+            overflow-y: auto; /* Add scrollbar if content overflows */
+        }
+
+        .sidebar img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        .sidebar a {
+            display: block;
+            margin: 10px 0; /* Add margin for separation */
+            padding: 10px 15px; /* Add padding for a button-like feel */
+            color: #01e8d4;
+            text-decoration: none;
+            font-weight: bold;
+            font-family: 'Lexend', sans-serif;
+            background-color: #fff; /* White background for button */
+            border: 2px solid #01e8d4; /* Outline */
+            border-radius: 5px; /* Rounded corners */
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .sidebar a:hover {
+            background-color: #01e8d4;
+            color: #fff; /* Change text color on hover */
+        }
+
+        .main-content {
+            flex: 1;
+            padding: 20px;
+            background: url('bgimg.jpg') no-repeat center center;
+            background-size: cover;
+            position: relative;
+            box-sizing: border-box;
+            overflow-y: auto;
+            color: #000;
+        }
+
+        .main-content .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5); /* Optional: Adds a dark overlay to improve text readability */
+            z-index: 1;
+        }
+
+        .main-content .content-wrapper {
+            position: relative;
+            z-index: 2;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent white background */
+            border-radius: 10px;
+        }
+
+        .content {
+            margin: 0;
+            padding: 0;
+        }
+
+        .class-card {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 30px;
+        }
+
+        .class-card .class-image {
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            padding: 10px;
+            width: 160px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-right: 20px;
+        }
+
+        .class-card img {
+            width: 150px;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .class-name {
+            font-family: 'Lexend', sans-serif;
+            font-size: 1.2em;
+            color: #fff;
+            text-align: center;
+            margin-top: 10px;
+            width: 150px;
+        }
+
+        .class-info {
+            flex: 1;
+            padding: 10px 15px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            max-width: calc(75% - 180px);
+        }
+
+        .class-info h2 {
+            font-family: 'Lexend', sans-serif;
+            font-size: 1.5em;
+            color: #01e8d4;
+            margin: 0 0 10px;
+        }
+
+        .class-info p {
+            font-family: 'Proxima Nova', sans-serif;
+            font-size: 1em;
+            color: #000;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Classes</h1>
+    </header>
+    <div class="container">
+        <div class="sidebar">
+            <img src="gg.jpg" alt="Banner">
+            <a href="index.html">Home</a>
+            <a href="classes.html">Classes</a>
+            <!-- Add more links as needed -->
+        </div>
+        <div class="main-content">
+            <div class="content-wrapper">
+                <div class="content">
+                    <!-- Bully -->
+                    <div class="class-card">
+                        <div class="class-image">
+                            <a href="bully.html">
+                                <img src="lilb.png" alt="Bully Class Image">
+                            </a>
+                            <div class="class-name">Bully</div>
+                        </div>
+                        <div class="class-info">
+                            <h2>Bully</h2>
+                            <p>Details about the Bully class go here. Describe the strengths, abilities, and unique traits of the Bully class.</p>
+                        </div>
+                    </div>
+
+                    <!-- Fighter -->
+                    <div class="class-card">
+                        <div class="class-image">
+                            <a href="fighter.html">
+                                <img src="images/fighter.jpg" alt="Fighter Class Image">
+                            </a>
+                            <div class="class-name">Fighter</div>
+                        </div>
+                        <div class="class-info">
+                            <h2>Fighter</h2>
+                            <p>Details about the Fighter class go here. Describe the strengths, abilities, and unique traits of the Fighter class.</p>
+                        </div>
+                    </div>
+
+                    <!-- Heavy -->
+                    <div class="class-card">
+                        <div class="class-image">
+                            <a href="heavy.html">
+                                <img src="images/heavy.jpg" alt="Heavy Class Image">
+                            </a>
+                            <div class="class-name">Heavy</div>
+                        </div>
+                        <div class="class-info">
+                            <h2>Heavy</h2>
+                            <p>Details about the Heavy class go here. Describe the strengths, abilities, and unique traits of the Heavy class.</p>
+                        </div>
+                    </div>
+
+                    <!-- Marauder -->
+                    <div class="class-card">
+                        <div class="class-image">
+                            <a href="marauder.html">
+                                <img src="images/marauder.jpg" alt="Marauder Class Image">
+                            </a>
+                            <div class="class-name">Marauder</div>
+                        </div>
+                        <div class="class-info">
+                            <h2>Marauder</h2>
+                            <p>Details about the Marauder class go here. Describe the strengths, abilities, and unique traits of the Marauder class.</p>
+                        </div>
+                    </div>
+                    
+                       <!-- Psychic -->
+                    <div class="class-card">
+                        <div class="class-image">
+                            <a href="psychic.html">
+                                <img src="images/psychic.jpg" alt="Psychic Class Image">
+                            </a>
+                            <div class="class-name">Psychic</div>
+                        </div>
+                        <div class="class-info">
+                            <h2>Psychic</h2>
+                            <p>Details about the Marauder class go here. Describe the strengths, abilities, and unique traits of the Psychic class.</p>
+                        </div>
+                    </div>
+                    
+                       <!-- Rogue -->
+                    <div class="class-card">
+                        <div class="class-image">
+                            <a href="rogue.html">
+                                <img src="55rogue.png" alt="Rogue Class Image">
+                            </a>
+                            <div class="class-name">Rogue</div>
+                        </div>
+                        <div class="class-info">
+                            <h2>Rogue</h2>
+                            <p>Details about the Rogue class go here. Describe the strengths, abilities, and unique traits of the Rogue class.</p>
+                        </div>
+                    </div>
+                    
+                       <!-- Sorcerer -->
+                    <div class="class-card">
+                        <div class="class-image">
+                            <a href="sorcerer.html">
+                                <img src="gojip.png" alt="Socerer Class Image">
+                            </a>
+                            <div class="class-name">Sorcerer</div>
+                        </div>
+                        <div class="class-info">
+                            <h2>Sorcerer</h2>
+                            <p>Details about the Sorcerer class go here. Describe the strengths, abilities, and unique traits of the Sorcerer class.</p>
+                            
+                               <!-- Tactician -->
+                    <div class="class-card">
+                        <div class="class-image">
+                            <a href="tactician.html">
+                                <img src="images/tactician.jpg" alt="Tactician Class Image">
+                            </a>
+                            <div class="class-name">Tactician</div>
+                        </div>
+                        <div class="class-info">
+                            <h2>Tactician</h2>
+                            <p>Details about the Tactician class go here. Describe the strengths, abilities, and unique traits of the Tactician class.</p>
+                        </div>
+                    </div>
+                        </div>
+                    </div>
+
+                    <!-- Add more class cards as needed -->
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
