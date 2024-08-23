@@ -3,6 +3,7 @@ body {
     font-family: 'Proxima Nova', sans-serif;
     background-color: #fff;
     color: #333;
+    overflow-x: hidden;
 }
 
 .container {
@@ -44,4 +45,21 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Lexend', sans-serif;
 }
 
-/* Add any additional styling for a punk vibe here */
+/* Punk style adjustments */
+body {
+    background-color: #fff;
+}
+
+.sidebar {
+    border-right: 2px solid #00f0d9;
+}
+
+.sidebar ul li a:hover {
+    color: #fff;
+    background-color: #00f0d9;
+}
+
+.main-content {
+    background-color: #f9f9f9;
+    border-left: 2px solid #00f0d9;
+}
