@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bully Class</title>
+    <title>Pulse</title>
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Proxima+Nova&display=swap" rel="stylesheet">
     <style>
@@ -11,14 +11,14 @@
             margin: 0;
             padding: 0;
             font-family: 'Proxima Nova', sans-serif;
-            background-color: #d5f7f3;
+            background-color: #d5f7f3; /* Light grey/desaturated seafoam green */
             color: #000;
         }
 
         header {
             width: 100%;
             padding: 20px;
-            background-color: #fff;
+            background-color: #fff; /* White background for header */
             border-bottom: 5px solid #01e8d4;
             text-align: center;
             box-sizing: border-box;
@@ -32,107 +32,101 @@
         }
 
         .container {
+            display: flex;
+            flex-direction: row;
             max-width: 1200px;
             margin: 0 auto;
-            padding: 20px;
+            padding: 0;
+            height: calc(100vh - 80px); /* Adjust height to fit within viewport minus header */
             box-sizing: border-box;
-            background: url('bgimg.jpg') no-repeat center center;
-            background-size: cover;
-            position: relative;
-        }
-
-        .content-wrapper {
-            background-color: rgba(255, 255, 255, 0.8);
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            position: relative;
-            z-index: 2;
-        }
-
-        .class-image {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        .class-image img {
-            width: 200px;
-            height: auto;
-            border-radius: 10px;
-        }
-
-        .class-info h2 {
-            font-family: 'Lexend', sans-serif;
-            font-size: 2em;
-            color: #01e8d4;
-            margin: 0 0 20px;
-            text-align: center;
-        }
-
-        .class-info p {
-            font-family: 'Proxima Nova', sans-serif;
-            font-size: 1em;
-            color: #000;
-            line-height: 1.6em;
-            margin: 0 0 20px;
         }
 
         .sidebar {
-            margin-top: 20px;
+            width: 250px; /* Fixed width for sidebar */
+            padding: 20px;
+            background-color: #f0f0f0; /* Light grey */
+            border-right: 5px solid #01e8d4;
+            box-sizing: border-box;
+            height: 100%;
+            overflow-y: auto; /* Add scrollbar if content overflows */
+        }
+
+        .sidebar img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 20px;
         }
 
         .sidebar a {
             display: block;
-            margin: 10px 0;
-            padding: 10px 15px;
+            margin: 10px 0; /* Add margin for separation */
+            padding: 10px 15px; /* Add padding for a button-like feel */
             color: #01e8d4;
             text-decoration: none;
             font-weight: bold;
             font-family: 'Lexend', sans-serif;
-            background-color: #fff;
-            border: 2px solid #01e8d4;
-            border-radius: 5px;
+            background-color: #fff; /* White background for button */
+            border: 2px solid #01e8d4; /* Outline */
+            border-radius: 5px; /* Rounded corners */
             transition: background-color 0.3s, color 0.3s;
-            text-align: center;
         }
 
         .sidebar a:hover {
             background-color: #01e8d4;
-            color: #fff;
+            color: #fff; /* Change text color on hover */
         }
 
+        .main-content {
+            flex: 1;
+            padding: 20px;
+            background: url('bgimg.jpg') no-repeat center center;
+            background-size: cover;
+            position: relative;
+            box-sizing: border-box;
+            overflow-y: auto;
+            color: #000;
+        }
+
+        .main-content .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5); /* Optional: Adds a dark overlay to improve text readability */
+            z-index: 1;
+        }
+
+        .main-content .content-wrapper {
+            position: relative;
+            z-index: 2;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent white background */
+            border-radius: 10px;
+        }
+
+        .content {
+            margin: 0;
+            padding: 0;
+        }
     </style>
 </head>
 <body>
     <header>
-        <h1>Bully Class</h1>
+        <h1>Bully</h1>
     </header>
     <div class="container">
-        <div class="content-wrapper">
-            <div class="class-image">
-                <img src="lilb.png" alt="Bully Class Image">
-            </div>
-            <div class="class-info">
-                <h2>Overview</h2>
-                <p>
-                    The Bully class specializes in close combat and intimidation. Known for their brute strength and aggressive tactics, Bullies overpower their enemies with raw physical power and psychological dominance. They excel in brawling, grappling, and using their environment to their advantage.
-                </p>
-                
-                <h2>Abilities</h2>
-                <p>
-                    Bullies have a unique set of abilities that revolve around causing fear and maximizing damage in melee combat. They can intimidate opponents, reducing their effectiveness in battle, and possess powerful strikes that can knock back or stun enemies. Their resilience also makes them difficult to take down in a fight.
-                </p>
-                
-                <h2>Playstyle</h2>
-                <p>
-                    Playing as a Bully means taking the front lines and using your strength to control the battlefield. You'll want to get up close and personal with your enemies, using your intimidating presence to disrupt their plans and your brute force to bring them down.
-                </p>
-            </div>
-        </div>
-        
         <div class="sidebar">
-            <a href="classes.html">Back to Classes</a>
+            <img src="gg.png" alt="Banner">
             <a href="index.html">Home</a>
+            <a href="classes.html">Classes</a>
+            <!-- Add more links as needed -->
+        </div>
+        <div class="main-content">
+            <div class="content-wrapper">
+                <h2>Welcome to Pulse</h2>
+                <p>Pulse is a TTRPG system that brings a unique blend of sleek modern design and a punk aesthetic. Explore different classes, each with their own unique traits and abilities, and dive into a world of thrilling adventures and strategic gameplay.</p>
+            </div>
         </div>
     </div>
 </body>
