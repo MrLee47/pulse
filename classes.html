@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pulse</title>
+    <title>Pulse - Classes</title>
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Proxima+Nova&display=swap" rel="stylesheet">
     <style>
@@ -17,9 +17,11 @@
 
         header {
             width: 100%;
+            max-width: 1200px; /* Match the container max-width */
+            margin: 0 auto; /* Center the header */
             padding: 20px;
-            background-color: #fff; /* White background for header */
-            border-bottom: 5px solid #01e8d4;
+            background-color: #000000; /* Black background for header */
+            border-bottom: 5px solid #000000;
             text-align: center;
             box-sizing: border-box;
         }
@@ -27,7 +29,7 @@
         header h1 {
             font-family: 'Lexend', sans-serif;
             font-size: 3em;
-            color: #01e8d4;
+            color: #ffffff; /* Change text color to white */
             margin: 0;
         }
 
@@ -45,7 +47,7 @@
             width: 250px; /* Fixed width for sidebar */
             padding: 20px;
             background-color: #f0f0f0; /* Light grey */
-            border-right: 5px solid #01e8d4;
+            border-right: 5px solid #000000;
             box-sizing: border-box;
             height: 100%;
             overflow-y: auto; /* Add scrollbar if content overflows */
@@ -61,25 +63,25 @@
             display: block;
             margin: 10px 0; /* Add margin for separation */
             padding: 10px 15px; /* Add padding for a button-like feel */
-            color: #01e8d4;
+            color: #000; /* Set link color to black */
             text-decoration: none;
             font-weight: bold;
             font-family: 'Lexend', sans-serif;
             background-color: #fff; /* White background for button */
-            border: 2px solid #01e8d4; /* Outline */
+            border: 2px solid #000; /* Black border */
             border-radius: 5px; /* Rounded corners */
-            transition: background-color 0.3s, color 0.3s;
+            transition: background-color 0.3s; /* Remove transition for color */
         }
 
         .sidebar a:hover {
-            background-color: #01e8d4;
-            color: #fff; /* Change text color on hover */
+            background-color: #01e8d4; /* Change background color on hover */
+            /* No border color change on hover */
         }
 
         .main-content {
             flex: 1;
             padding: 20px;
-            background: url('bgimg.jpg') no-repeat center center;
+            background: url('bg.webp') no-repeat center center;
             background-size: cover;
             position: relative;
             box-sizing: border-box;
@@ -109,65 +111,11 @@
             margin: 0;
             padding: 0;
         }
-
-        .class-card {
-            display: flex;
-            align-items: flex-start;
-            margin-bottom: 30px;
-        }
-
-        .class-card .class-image {
-            background-color: rgba(0, 0, 0, 0.5);
-            border-radius: 10px;
-            padding: 10px;
-            width: 160px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-right: 20px;
-        }
-
-        .class-card img {
-            width: 150px;
-            height: auto;
-            border-radius: 10px;
-        }
-
-        .class-name {
-            font-family: 'Lexend', sans-serif;
-            font-size: 1.2em;
-            color: #fff;
-            text-align: center;
-            margin-top: 10px;
-            width: 150px;
-        }
-
-        .class-info {
-            flex: 1;
-            padding: 10px 15px;
-            background-color: rgba(255, 255, 255, 0.8);
-            border-radius: 10px;
-            max-width: calc(75% - 180px);
-        }
-
-        .class-info h2 {
-            font-family: 'Lexend', sans-serif;
-            font-size: 1.5em;
-            color: #01e8d4;
-            margin: 0 0 10px;
-        }
-
-        .class-info p {
-            font-family: 'Proxima Nova', sans-serif;
-            font-size: 1em;
-            color: #000;
-            margin: 0;
-        }
     </style>
 </head>
 <body>
     <header>
-        <h1>Classes</h1>
+        <h1>Home</h1>
     </header>
     <div class="container">
         <div class="sidebar">
