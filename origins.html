@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pulse</title>
+    <title>Pulse - Classes</title>
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Proxima+Nova&display=swap" rel="stylesheet">
     <style>
@@ -17,9 +17,11 @@
 
         header {
             width: 100%;
+            max-width: 1200px; /* Match the container max-width */
+            margin: 0 auto; /* Center the header */
             padding: 20px;
-            background-color: #fff; /* White background for header */
-            border-bottom: 5px solid #01e8d4;
+            background-color: #000000; /* Black background for header */
+            border-bottom: 5px solid #000000;
             text-align: center;
             box-sizing: border-box;
         }
@@ -27,7 +29,7 @@
         header h1 {
             font-family: 'Lexend', sans-serif;
             font-size: 3em;
-            color: #01e8d4;
+            color: #ffffff; /* Change text color to white */
             margin: 0;
         }
 
@@ -45,7 +47,7 @@
             width: 250px; /* Fixed width for sidebar */
             padding: 20px;
             background-color: #f0f0f0; /* Light grey */
-            border-right: 5px solid #01e8d4;
+            border-right: 5px solid #000000;
             box-sizing: border-box;
             height: 100%;
             overflow-y: auto; /* Add scrollbar if content overflows */
@@ -61,25 +63,25 @@
             display: block;
             margin: 10px 0; /* Add margin for separation */
             padding: 10px 15px; /* Add padding for a button-like feel */
-            color: #01e8d4;
+            color: #000; /* Set link color to black */
             text-decoration: none;
             font-weight: bold;
             font-family: 'Lexend', sans-serif;
             background-color: #fff; /* White background for button */
-            border: 2px solid #01e8d4; /* Outline */
+            border: 2px solid #000; /* Black border */
             border-radius: 5px; /* Rounded corners */
-            transition: background-color 0.3s, color 0.3s;
+            transition: background-color 0.3s; /* Remove transition for color */
         }
 
         .sidebar a:hover {
-            background-color: #01e8d4;
-            color: #fff; /* Change text color on hover */
+            background-color: #01e8d4; /* Change background color on hover */
+            /* No border color change on hover */
         }
 
         .main-content {
             flex: 1;
             padding: 20px;
-            background: url('bgimg.jpg') no-repeat center center;
+            background: url('bg.webp') no-repeat center center;
             background-size: cover;
             position: relative;
             box-sizing: border-box;
@@ -113,24 +115,21 @@
 </head>
 <body>
     <header>
-        <h1>Pulse</h1>
+        <h1>Home</h1>
     </header>
     <div class="container">
         <div class="sidebar">
-            <img src="gg.png" alt="Banner">
+            <img src="gg.jpg" alt="Banner">
             <a href="index.html">Home</a>
             <a href="classes.html">Classes</a>
             <a href="origins.html">Origins</a>
             <a href="items.html">Items</a>
-            <!-- Add more links as needed -->
         </div>
         <div class="main-content">
             <div class="content-wrapper">
-                <h2>Welcome to Pulse</h2>
-                <p>Pulse is a TTRPG system that brings a unique blend of sleek modern design and a punk aesthetic. Explore different classes, each with their own unique traits and abilities, and dive into a world of thrilling adventures and strategic gameplay.</p>
+                <!-- Your content here -->
             </div>
         </div>
     </div>
-    <script src="script.js"></script> 
 </body>
 </html>
