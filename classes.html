@@ -7,158 +7,150 @@
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Proxima+Nova&display=swap" rel="stylesheet">
     <style>
-       body, html {
-    margin: 0;
-    padding: 0;
-    font-family: 'Proxima Nova', sans-serif;
-    background-color: #d5f7f3; /* Light grey/desaturated seafoam green */
-    color: #000;
-}
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Proxima Nova', sans-serif;
+            background-color: #d5f7f3; /* Light grey/desaturated seafoam green */
+            color: #000;
+        }
 
-header {
-    width: 100%;
-    max-width: 1200px; /* Match the container max-width */
-    margin: 0 auto; /* Center the header */
-    padding: 20px;
-    background-color: #000000; /* Black background for header */
-    border-bottom: 5px solid #000000;
-    text-align: center;
-    box-sizing: border-box;
-}
+        header {
+            width: 100%;
+            max-width: 1200px; /* Match the container max-width */
+            margin: 0 auto; /* Center the header */
+            padding: 20px;
+            background-color: #000000; /* Black background for header */
+            border-bottom: 5px solid #000000;
+            text-align: center;
+            box-sizing: border-box;
+        }
 
-header h1 {
-    font-family: 'Lexend', sans-serif;
-    font-size: 3em;
-    color: #ffffff; /* Change text color to white */
-    margin: 0;
-}
+        header h1 {
+            font-family: 'Lexend', sans-serif;
+            font-size: 3em;
+            color: #ffffff; /* Change text color to white */
+            margin: 0;
+        }
 
-.container {
-    display: flex;
-    flex-direction: row;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0;
-    box-sizing: border-box;
-}
+        .container {
+            display: flex;
+            flex-direction: row;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0;
+            height: calc(100vh - 80px); /* Adjust height to fit within viewport minus header */
+            box-sizing: border-box;
+        }
 
-.sidebar {
-    width: 250px; /* Fixed width for sidebar */
-    padding: 20px;
-    background-color: #f0f0f0; /* Light grey */
-    border-right: 5px solid #000000;
-    box-sizing: border-box;
-    height: 100%;
-    overflow-y: auto; /* Add scrollbar if content overflows */
-}
+        .sidebar {
+            width: 250px; /* Fixed width for sidebar */
+            padding: 20px;
+            background-color: #f0f0f0; /* Light grey */
+            border-right: 5px solid #000000;
+            box-sizing: border-box;
+            height: 100%;
+            overflow-y: auto; /* Add scrollbar if content overflows */
+        }
 
-.sidebar img {
-    width: 100%;
-    height: auto;
-    margin-bottom: 20px;
-}
+        .sidebar img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
 
-.sidebar a {
-    display: block;
-    margin: 10px 0; /* Add margin for separation */
-    padding: 10px 15px; /* Add padding for a button-like feel */
-    color: #000; /* Set link color to black */
-    text-decoration: none;
-    font-weight: bold;
-    font-family: 'Lexend', sans-serif;
-    background-color: #fff; /* White background for button */
-    border: 2px solid #000; /* Black border */
-    border-radius: 5px; /* Rounded corners */
-    transition: background-color 0.3s; /* Remove transition for color */
-}
+        .sidebar a {
+            display: block;
+            margin: 10px 0; /* Add margin for separation */
+            padding: 10px 15px; /* Add padding for a button-like feel */
+            color: #000; /* Set link color to black */
+            text-decoration: none;
+            font-weight: bold;
+            font-family: 'Lexend', sans-serif;
+            background-color: #fff; /* White background for button */
+            border: 2px solid #000; /* Black border */
+            border-radius: 5px; /* Rounded corners */
+            transition: background-color 0.3s; /* Remove transition for color */
+        }
 
-.sidebar a:hover {
-    background-color: #01e8d4; /* Change background color on hover */
-    /* No border color change on hover */
-}
+        .sidebar a:hover {
+            background-color: #01e8d4; /* Change background color on hover */
+            /* No border color change on hover */
+        }
 
-.main-content {
-    flex: 1;
-    padding: 20px;
-    background: url('bg.webp') no-repeat center center;
-    background-size: cover;
-    position: relative;
-    box-sizing: border-box;
-    overflow-y: auto;
-    color: #000;
-}
+        .main-content {
+            flex: 1;
+            padding: 20px;
+            background: url('bg.webp') no-repeat center center;
+            background-size: cover;
+            position: relative;
+            box-sizing: border-box;
+            overflow-y: auto;
+            color: #000;
+        }
 
-.main-content .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.5); /* Optional: Adds a dark overlay to improve text readability */
-    z-index: 1;
-}
+        .main-content .content-wrapper {
+            position: relative;
+            z-index: 2;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent white background */
+            border-radius: 10px;
+            box-sizing: border-box;
+            width: 100%;
+            overflow: hidden;
+        }
 
-.main-content .content-wrapper {
-    position: relative;
-    z-index: 2;
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent white background */
-    border-radius: 10px;
-    height: auto; /* Ensure it automatically adjusts to fit all content */
-}
+        .content {
+            margin: 0;
+            padding: 0;
+        }
 
-.content {
-    margin: 0;
-    padding: 0;
-    height: auto; /* Ensure it automatically adjusts to fit all content */
-}
+        .class-card {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 30px;
+        }
 
-.class-card {
-    display: flex;
-    align-items: flex-start;
-    margin-bottom: 30px;
-}
+        .class-card .class-image {
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            padding: 10px;
+            width: 160px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-right: 20px;
+        }
 
-.class-card .class-image {
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 10px;
-    padding: 10px;
-    width: 160px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-right: 20px;
-}
+        .class-card img {
+            width: 150px;
+            height: auto;
+            border-radius: 10px;
+        }
 
-.class-card img {
-    width: 150px;
-    height: auto;
-    border-radius: 10px;
-}
+        .class-name {
+            font-family: 'Lexend', sans-serif;
+            font-size: 1.2em;
+            color: #fff;
+            text-align: center;
+            margin-top: 10px;
+            width: 150px;
+        }
 
-.class-name {
-    font-family: 'Lexend', sans-serif;
-    font-size: 1.2em;
-    color: #fff;
-    text-align: center;
-    margin-top: 10px;
-    width: 150px;
-}
+        .class-info {
+            flex: 1;
+            padding: 10px 15px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            max-width: calc(75% - 180px);
+        }
 
-.class-info {
-    flex: 1;
-    padding: 10px 15px;
-    background-color: rgba(255, 255, 255, 0.8);
-    border-radius: 10px;
-    max-width: calc(75% - 180px);
-}
-
-.class-info h2 {
-    font-family: 'Lexend', sans-serif;
-    font-size: 1.5em;
-    color: #01e8d4;
-    margin: 0 0 10px;
-}
+        .class-info h2 {
+            font-family: 'Lexend', sans-serif;
+            font-size: 1.5em;
+            color: #01e8d4;
+            margin: 0 0 10px;
+        }
 
     </style>
 </head>
@@ -183,7 +175,6 @@ header h1 {
                             <a href="bully.html">
                                 <img src="bully.png" alt="Bully Class Image">
                             </a>
-                        
                         </div>
                         <div class="class-info">
                             <h2>Bully</h2>
@@ -199,13 +190,13 @@ header h1 {
                             <a href="fighter.html">
                                 <img src="Untitled86 (1).png" alt="Fighter Class Image">
                             </a>
-                    
                         </div>
                         <div class="class-info">
-                         <h2>Fighter</h2>
+                            <h2>Fighter</h2>
                             <p>A powerful single target striker who uses a combination of powerful offense and utility to not only overpower, but outsmart their enemies. A well-rounded and versatile asset on the battlefield, a Fighter prides itself in its many attacks and wide array of different utilities. A Fighter won't back down until the fight is finished. </p>
                             <p> Type: Striker  </p>
-                            <p> Ease of Play: ★★★★★ </p>     </div>
+                            <p> Ease of Play: ★★★★★ </p>
+                        </div>
                     </div>
 
                     <!-- Heavy -->
@@ -214,55 +205,46 @@ header h1 {
                             <a href="heavy.html">
                                 <img src="images/heavy.jpg" alt="Heavy Class Image">
                             </a>
-                 
                         </div>
                         <div class="class-info">
-                                                     <h2>Heavy</h2>
-
+                            <h2>Heavy</h2>
                             <p>Heavies embody the essence of unyielding aggression, either smashing through barriers or laying waste to anything that dares confront them. Their imposing presence on the battlefield instills fear in enemies, while their sheer physicality allows them to absorb devastating blows with little regard for their own safety, leaving a path of destruction in their wake. </p>
                             <p> Type: Vanguard  </p>
-                            <p> Ease of Play: ★★★★☆ </p>     </div>
+                            <p> Ease of Play: ★★★★☆ </p>
+                        </div>
                     </div>
-                    
-    
 
-                                    </div>
-                    </div>
-                    
                     <!-- Psychic -->
                     <div class="class-card">
                         <div class="class-image">
                             <a href="psychic.html">
                                 <img src="images/psychic.jpg" alt="Psychic Class Image">
                             </a>
-                           
                         </div>
                         <div class="class-info">
-                                                          <h2>Psychic</h2>
-
+                            <h2>Psychic</h2>
                             <p> These enigmatic individuals tap into the hidden energies of the universe, allowing them to manipulate objects, influence thoughts, and foresee potential futures. With a presence that often feels otherworldly, Psychics can turn the tide of battle without ever lifting a physical weapon, using their intellect and intuition to outmaneuver opponents. </p>
-                            <p> Type: Mystic  </p>
-                            <p> Ease of Play: ★☆☆☆☆ </p>     </div>
+                            <p> Type: Support </p>
+                            <p> Ease of Play: ★★★★☆ </p>
+                        </div>
                     </div>
-                    
+
                     <!-- Rogue -->
                     <div class="class-card">
                         <div class="class-image">
                             <a href="rogue.html">
-                                <img src="55rogue.png" alt="Rogue Class Image">
+                                <img src="images/rogue.jpg" alt="Rogue Class Image">
                             </a>
-                           
                         </div>
                         <div class="class-info">
-                                            <h2>Rogue</h2>
-
-                            <p> Armed with a diverse arsenal of weapons designed for quick strikes and acrobatics, they excel in both melee and ranged combat, executing rapid assaults that capitalize on their lightning-fast reflexes. Rogues are adept at navigating complex terrain, utilizing their agility to scale obstacles and reposition themselves with ease. </p>
-                            <p> Type: Flank  </p>
-                            <p> Ease of Play: ★★★★★ </p>     </div>
+                            <h2>Rogue</h2>
+                            <p>The Rogue specializes in stealth, speed, and precision. They strike from the shadows, exploiting their enemies’ weaknesses before vanishing without a trace. With unparalleled agility and a mastery of deception, the Rogue thrives in environments where surprise and quick thinking can turn the tide of battle in an instant. </p>
+                            <p> Type: Assassin  </p>
+                            <p> Ease of Play: ★★★★★ </p>
+                        </div>
                     </div>
-                    
-    
-            <!-- Slayer -->
+
+                        <!-- Slayer -->
                     <div class="class-card">
                         <div class="class-image">
                             <a href="marauder.html">
@@ -288,13 +270,23 @@ header h1 {
                             </a>
                            
                         </div>
+
+                    <!-- Tactician -->
+                    <div class="class-card">
+                        <div class="class-image">
+                            <a href="tactician.html">
+                                <img src="images/tactician.jpg" alt="Tactician Class Image">
+                            </a>
+                        </div>
                         <div class="class-info">
-                             <h2>Tactician</h2>
+                           <h2>Tactician</h2>
                             <p> A strategist who excels in analyzing the battlefield and orchestrating complex maneuvers. With a keen mind for tactics and a comprehensive understanding of your allies’ strengths and weaknesses, you are the architect of victory, always several steps ahead of your adversaries. Your abilities allow you to adjust the flow of combat, directing your team with precision.  </p>
                             <p> Type: Flank </p>
                             <p> Ease of Play: ★★★☆☆ </p>
                         </div>
-                    <!-- Warlock -->
+                    </div>
+
+                     <!-- Warlock -->
                     <div class="class-card">
                         <div class="class-image">
                             <a href="sorcerer.html">
@@ -309,11 +301,10 @@ header h1 {
                             <p> Ease of Play: ★★☆☆☆ </p>
                         </div>
                     </div>
-                    </div>
+
                 </div>
             </div>
         </div>
     </div>
-    <script src="script.js"></script>
 </body>
 </html>
