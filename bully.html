@@ -1,41 +1,49 @@
-<style>
-    body, html {
-        margin: 0;
-        padding: 0;
-        font-family: 'Proxima Nova', sans-serif;
-        background-color: #d5f7f3; /* Light grey/desaturated seafoam green */
-        color: #000;
-    }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pulse - Classes</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Proxima+Nova&display=swap" rel="stylesheet">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Proxima Nova', sans-serif;
+            background-color: #d5f7f3; /* Light grey/desaturated seafoam green */
+            color: #000;
+        }
 
-    header {
-        width: 100%;
-        max-width: 1200px; /* Match the container max-width */
-        margin: 0 auto; /* Center the header */
-        padding: 20px;
-        background-color: #000000; /* Black background for header */
-        border-bottom: 5px solid #000000;
-        text-align: center;
-        box-sizing: border-box;
-    }
+        header {
+            width: 100%;
+            max-width: 1200px; /* Match the container max-width */
+            margin: 0 auto; /* Center the header */
+            padding: 20px;
+            background-color: #000000; /* Black background for header */
+            border-bottom: 5px solid #000000;
+            text-align: center;
+            box-sizing: border-box;
+        }
 
-    header h1 {
-        font-family: 'Lexend', sans-serif;
-        font-size: 3em;
-        color: #ffffff; /* Change text color to white */
-        margin: 0;
-    }
+        header h1 {
+            font-family: 'Lexend', sans-serif;
+            font-size: 3em;
+            color: #ffffff; /* Change text color to white */
+            margin: 0;
+        }
 
-    .container {
-        display: flex;
-        flex-direction: row;
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0;
-        height: calc(100vh - 80px); /* Adjust height to fit within viewport minus header */
-        box-sizing: border-box;
-    }
+        .container {
+            display: flex;
+            flex-direction: row;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0;
+            height: calc(100vh - 80px); /* Adjust height to fit within viewport minus header */
+            box-sizing: border-box;
+        }
 
-    .sidebar {
+        .sidebar {
             width: 250px; /* Fixed width for sidebar */
             padding: 20px;
             background-color: #f0f0f0; /* Light grey */
@@ -70,46 +78,46 @@
             /* No border color change on hover */
         }
 
-    .main-content {
-        flex: 1;
-        padding: 20px;
-        background: url('bg.webp') no-repeat center center;
-        background-size: cover;
-        position: relative;
-        box-sizing: border-box;
-        overflow-y: auto;
-        color: #000;
-    }
+        .main-content {
+            flex: 1;
+            padding: 20px;
+            background: url('bg.webp') no-repeat center center;
+            background-size: cover;
+            position: relative;
+            box-sizing: border-box;
+            overflow-y: auto;
+            color: #000;
+        }
 
-    .main-content .overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: rgba(0, 0, 0, 0.5); /* Optional: Adds a dark overlay to improve text readability */
-        z-index: 1;
-    }
+        .main-content .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5); /* Optional: Adds a dark overlay to improve text readability */
+            z-index: 1;
+        }
 
-    .main-content .content-wrapper {
-        position: relative;
-        z-index: 2;
-        padding: 20px;
-        background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent white background */
-        border-radius: 10px;
-    }
+        .main-content .content-wrapper {
+            position: relative;
+            z-index: 2;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent white background */
+            border-radius: 10px;
+        }
 
-    /* Adjust margins for headings and paragraphs */
-    .content-wrapper h3 {
-        margin-top: 10px; /* Decrease space above the heading */
-        margin-bottom: 5px; /* Decrease space below the heading */
-    }
+        /* Adjust margins for headings and paragraphs */
+        .content-wrapper h3 {
+            margin-top: 10px; /* Decrease space above the heading */
+            margin-bottom: 5px; /* Decrease space below the heading */
+        }
 
-    .content-wrapper p {
-        margin-top: 0; /* Remove space above the paragraph */
-        margin-bottom: 15px; /* Adjust space below the paragraph */
-    }
-</style>
+        .content-wrapper p {
+            margin-top: 0; /* Remove space above the paragraph */
+            margin-bottom: 15px; /* Adjust space below the paragraph */
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -117,7 +125,7 @@
     </header>
     <div class="container">
         <div class="sidebar">
-           <img src="gg.png" alt="Banner">
+            <img src="gg.png" alt="Banner">
             <a href="index.html">Home</a>
             <a href="classes.html">Classes</a>
             <a href="origins.html">Origins</a>
@@ -127,8 +135,8 @@
         <div class="main-content">
             <div class="content-wrapper">
                 <h3>Health</h3>
-             <p><b>Health per Level:</b> 10 + Constitution </p> 
-                    <p> <b>Health Die:</b> 1d6 per Level</p>
+                <p><b>Health per Level:</b> 10 + Constitution </p> 
+                <p><b>Health Die:</b> 1d6 per Level</p>
                 <h3>Overwhelming Aura:</h3>
                 <p>When you choose this class once per turn as a Bonus Action you can force a number of creatures within 10 meters (33 ft) of you roll a Insight check against your Aura score. On a fail they gain the Fear condition until the end of your turn. Additionally you cannot be attacked during your turn.</p>
                 <h3>Power Strike:</h3>
