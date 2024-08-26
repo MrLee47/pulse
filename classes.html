@@ -110,8 +110,9 @@
         .content {
             margin: 0;
             padding: 0;
+        }
 
-              .class-card {
+        .class-card {
             display: flex;
             align-items: flex-start;
             margin-bottom: 30px;
@@ -134,15 +135,6 @@
             border-radius: 10px;
         }
 
-        .class-name {
-            font-family: 'Lexend', sans-serif;
-            font-size: 1.2em;
-            color: #fff;
-            text-align: center;
-            margin-top: 10px;
-            width: 150px;
-        }
-
         .class-info {
             flex: 1;
             padding: 10px 15px;
@@ -157,143 +149,40 @@
             color: #01e8d4;
             margin: 0 0 10px;
         }
+
+        /* Add class-specific colors */
+        .class-info p {
+            margin: 0 0 10px;
         }
-    </style>
-</head>
-<body>
-    <header>
-        <h1>Classes</h1>
-    </header>
-    <div class="container">
-        <div class="sidebar">
-            <img src="gg.jpg" alt="Banner">
-            <a href="index.html">Home</a>
-            <a href="classes.html">Classes</a>
-            <a href="origins.html">Origins</a>
-            <a href="items.html">Items</a>
-        </div>
-        <div class="main-content">
-            <div class="content-wrapper">
-                <div class="content">
-                    <!-- Bully -->
-                    <div class="class-card">
-                        <div class="class-image">
-                            <a href="bully.html">
-                                <img src="bully.png" alt="Bully Class Image">
-                            </a>
-                            <div class="class-name">Bully</div>
-                        </div>
-                        <div class="class-info">
-                            <h2>Bully</h2>
-                            <p>A battlefield and crowd controller, the Bully dominates with an iron fist, they crush anyone who dares to challenge them, using raw strength and ruthless tactics to impose their will. These brutes thrive on intimidation, turning the battlefield into their personal playground where they instill terror and crush the weak.</p>
-                            <p> Type: Frontline </p>
-                            <p> Ease of Play: ★★★★☆ </p>
-                        </div>
-                    </div>
 
-                    <!-- Fighter -->
-                    <div class="class-card">
-                        <div class="class-image">
-                            <a href="fighter.html">
-                                <img src="Untitled86 (1).png" alt="Fighter Class Image">
-                            </a>
-                            <div class="class-name">Fighter</div>
-                        </div>
-                        <div class="class-info">
-                            <h2>Fighter</h2>
-                            <p>Details about the Fighter class go here. Describe the strengths, abilities, and unique traits of the Fighter class.</p>
-                        </div>
-                    </div>
+        .class-info .bully {
+            color: #B90E0A; /* Red */
+        }
 
-                    <!-- Heavy -->
-                    <div class="class-card">
-                        <div class="class-image">
-                            <a href="heavy.html">
-                                <img src="images/heavy.jpg" alt="Heavy Class Image">
-                            </a>
-                            <div class="class-name">Heavy</div>
-                        </div>
-                        <div class="class-info">
-                            <h2>Heavy</h2>
-                            <p>Details about the Heavy class go here. Describe the strengths, abilities, and unique traits of the Heavy class.</p>
-                        </div>
-                    </div>
+        .class-info .fighter {
+            color: #00F0FF; /* Blue */
+        }
 
-                    <!-- Marauder -->
-                    <div class="class-card">
-                        <div class="class-image">
-                            <a href="marauder.html">
-                                <img src="images/marauder.jpg" alt="Marauder Class Image">
-                            </a>
-                            <div class="class-name">Marauder</div>
-                        </div>
-                        <div class="class-info">
-                            <h2>Marauder</h2>
-                            <p>Details about the Marauder class go here. Describe the strengths, abilities, and unique traits of the Marauder class.</p>
-                        </div>
-                    </div>
-                    
-                    <!-- Psychic -->
-                    <div class="class-card">
-                        <div class="class-image">
-                            <a href="psychic.html">
-                                <img src="images/psychic.jpg" alt="Psychic Class Image">
-                            </a>
-                            <div class="class-name">Psychic</div>
-                        </div>
-                        <div class="class-info">
-                            <h2>Psychic</h2>
-                            <p>Details about the Psychic class go here. Describe the strengths, abilities, and unique traits of the Psychic class.</p>
-                        </div>
-                    </div>
-                    
-                    <!-- Rogue -->
-                    <div class="class-card">
-                        <div class="class-image">
-                            <a href="rogue.html">
-                                <img src="55rogue.png" alt="Rogue Class Image">
-                            </a>
-                            <div class="class-name">Rogue</div>
-                        </div>
-                        <div class="class-info">
-                            <h2>Rogue</h2>
-                            <p>Details about the Rogue class go here. Describe the strengths, abilities, and unique traits of the Rogue class.</p>
-                        </div>
-                    </div>
+        .class-info .heavy {
+            color: #0B6623; /* Green */
+        }
 
-                    <!-- Sorcerer -->
-                    <div class="class-card">
-                        <div class="class-image">
-                            <a href="sorcerer.html">
-                                <img src="images/warlock.jpg" alt="Sorcerer Class Image">
-                            </a>
-                            <div class="class-name">Sorcerer</div>
-                        </div>
-                        <div class="class-info">
-                            <h2>Sorcerer</h2>
-                            <p>Details about the Sorcerer class go here. Describe the strengths, abilities, and unique traits of the Sorcerer class.</p>
-                        </div>
-                    </div>
+        .class-info .marauder {
+            color: #FFF8E7; /* Cosmic Latte */
+        }
 
-        
-                    <!-- Tactician -->
-                    <div class="class-card">
-                        <div class="class-image">
-                            <a href="tech.html">
-                                <img src="images/tech.jpg" alt="Tactician Class Image">
-                            </a>
-                            <div class="class-name">Tactician</div>
-                        </div>
-                        <div class="class-info">
-                            <h2>Tactician</h2>
-                            <p>Details about the Tactician class go here. Describe the strengths, abilities, and unique traits of the Tactician class.</p>
-                        </div>
-                    </div>
-                    
-                </div>
-            </div>
-        </div>
-    </div>
-     <script src="script.js"></script> 
-</body>
-</html>
+        .class-info .psychic {
+            color: #F433FF; /* Pink */
+        }
+
+        .class-info .rogue {
+            color: #FCFC5C; /* Yellow */
+        }
+
+        .class-info .sorcerer {
+            color: #BC13FE; /* Purple */
+        }
+
+        .class-info .tactician {
+            color: #FF5C00; /* Orange */
+        }
