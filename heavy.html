@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classes - Fighter</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Proxima+Nova&display=swap" rel="stylesheet">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Proxima Nova', sans-serif;
+            background-color: #d5f7f3; /* Light grey/desaturated seafoam green */
+            color: #000;
+        }
+
+        header {
+            width: 100%;
+            max-width: 1200px; /* Match the container max-width */
+            margin: 0 auto; /* Center the header */
+            padding: 20px;
+            background-color: #000000; /* Black background for header */
+            border-bottom: 5px solid #000000;
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        header h1 {
+            font-family: 'Lexend', sans-serif;
+            font-size: 3em;
+            color: #ffffff; /* Change text color to white */
+            margin: 0;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0;
+            height: calc(100vh - 80px); /* Adjust height to fit within viewport minus header */
+            box-sizing: border-box;
+        }
+
+        .sidebar {
+            width: 250px; /* Fixed width for sidebar */
+            padding: 20px;
+            background-color: #f0f0f0; /* Light grey */
+            border-right: 5px solid #000000;
+            box-sizing: border-box;
+            height: 100%;
+            overflow-y: auto; /* Add scrollbar if content overflows */
+        }
+
+        .sidebar img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        .sidebar a {
+            display: block;
+            margin: 10px 0; /* Add margin for separation */
+            padding: 10px 15px; /* Add padding for a button-like feel */
+            color: #000; /* Set link color to black */
+            text-decoration: none;
+            font-weight: bold;
+            font-family: 'Lexend', sans-serif;
+            background-color: #fff; /* White background for button */
+            border: 2px solid #000; /* Black border */
+            border-radius: 5px; /* Rounded corners */
+            transition: background-color 0.3s; /* Remove transition for color */
+        }
+
+        .sidebar a:hover {
+            background-color: #01e8d4; /* Change background color on hover */
+            /* No border color change on hover */
+        }
+
+        .main-content {
+            flex: 1;
+            padding: 20px;
+            background: url('bg.webp') no-repeat center center;
+            background-size: cover;
+            position: relative;
+            box-sizing: border-box;
+            overflow-y: auto;
+            color: #000;
+        }
+
+        .main-content .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5); /* Optional: Adds a dark overlay to improve text readability */
+            z-index: 1;
+        }
+
+        .main-content .content-wrapper {
+            position: relative;
+            z-index: 2;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent white background */
+            border-radius: 10px;
+        }
+
+        .content {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Home</h1>
+    </header>
+    <div class="container">
+        <div class="sidebar">
+            <img src="gg.jpg" alt="Banner">
+            <a href="index.html">Home</a>
+            <a href="classes.html">Classes</a>
+            <a href="origins.html">Origins</a>
+            <a href="items.html">Items</a>
+          </div>
+        <div class="main-content">
+            <div class="content-wrapper">
+                <h3>Health</h3>
+                <p><b>Health per Level:</b> 15 + Constitution </p> 
+                <p><b>Health Die:</b> 1d4 per Level</p>
+                <h3>Charged Die:</h3>
+                <p>You can use a Bonus Action to increase the weapon die value of your next attack by one. When you use this, you can move up to 5 meters (16 ft) in any direction or use a Jump. At level 10, your die value increase by 2 rather than 1. If the die value would exceed a d12, add an additional 1d4 and increase that dies value if it increases beyond that.
+</p>
+                <h3> Overpowering Resilience:</h3>
+                <p>As a Bonus Action, you can activate Overpowering Resilience, providing yourself with an additional layer of "Soak" that absorbs damage for 1 minute. During this time, you gain additional Health equal to 3 times the difference between your Maximum Health and your current Health. Once the duration ends or you've taken that much damage, the additional Health is gone and cannot be regained. This does not Heal any of your missing Health or count as a healing effect. This can be used 3 times during an Encounter, and can also be used as a Reaction.</p>
+  <h3> 1st Level Traits</h3>
+
+              <p><b>Bounding Leap</b> (Cost 1):</p>
+<p>Type: Passive</p>
+<p>You can multiply your Jump distance, vertical or long jump, by a roll of your Constitution die each time you Jump.</p>
+
+<p><b>Coconut Catch</b> (Cost 1):</p>
+<p>Type: Reaction</p>
+<p>When a creature within 10 meters (33 ft) of you is falling, you can use your reaction to Grab it, forcing you to take the fall damage instead.</p>
+
+<p><b>Ground Shatter</b> (Cost 1):</p>
+<p>Type: Double Action</p>
+<p>You can perform a quick leap, choosing an area within 5 meters (16 ft) in any direction and landing, dealing 3d10 Physical damage in a 10 meter (33 ft) area, damaging all creatures in that range.</p>
+
+<p><b>Hardened Strikes</b> (Cost 1):</p>
+<p>Type: Passive</p>
+<p>You can add your Constitution die to your attacks if you currently have Soak.</p>
+
+<p><b>Eagle Snatch</b> (Cost 1):</p>
+<p>Type: Reaction</p>
+<p>When a creature misses an attack against you, you can attempt to Grab the creature as a Reaction.</p>
+
+<p><b>Repositioning Move</b> (Cost 1):</p>
+<p>Type: Reaction</p>
+<p>When a creature you see attacks a target other than you that is within 5 meters (16 ft), you can use your reaction to swap positions with the target creature. You become the new target of the attack.</p>
+
+<p><b>Titan's Grasp</b> (Cost 1):</p>
+<p>Type: Free Action</p>
+<p>When you attack someone, you can Grab them as a Free Action.</p>
+
+<p><b>Thunderous Blows</b> (Cost 1):</p>
+<p>Type: Passive</p>
+<p>You can add 1d4 Explosive damage to your melee attacks.</p>
+
+<p><b>Unkillable Behemoth</b> (Cost 1):</p>
+<p>Type: Passive</p>
+<p>When you use Overpowering Resilience, your size increases by 2.</p>
+
+<p><b>Unyielding Blows</b> (Cost 1):</p>
+<p>Type: Passive</p>
+<p>Your melee attacks deal an additional 1d4 Physical damage. Additionally, each attack reduces the target's speed by 10 meters until the start of your next turn.</p>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>
