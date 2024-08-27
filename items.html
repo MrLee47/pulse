@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pulse - Classes</title>
+    <title>Pulse</title>
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Proxima+Nova&display=swap" rel="stylesheet">
     <style>
@@ -111,11 +111,56 @@
             margin: 0;
             padding: 0;
         }
+
+        /* Settings button */
+        .settings-btn {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background: url('settings.png') no-repeat center center;
+            background-size: cover;
+            width: 40px; /* Size of the button */
+            height: 40px; /* Size of the button */
+            border: none;
+            cursor: pointer;
+            z-index: 10;
+        }
+
+        /* Settings panel */
+        .settings {
+            position: fixed;
+            top: 50px;
+            right: 10px;
+            background: rgba(255, 255, 255, 0.8);
+            border: 1px solid #000;
+            border-radius: 5px;
+            padding: 10px;
+            z-index: 10;
+            display: none; /* Hide by default */
+        }
+
+        .settings label {
+            display: block;
+            margin: 5px 0;
+        }
+
+        .settings input[type="range"] {
+            width: 100%;
+        }
+
+        .settings .contrast-toggle {
+            margin-top: 10px;
+        }
+
+        .high-contrast {
+            background-color: #000;
+            color: #fff;
+        }
     </style>
 </head>
 <body>
     <header>
-        <h1>Items</h1>
+        <h1>Home</h1>
     </header>
     <div class="container">
         <div class="sidebar">
@@ -131,5 +176,49 @@
             </div>
         </div>
     </div>
+    <!-- Background audio -->
+    <audio id="background-audio" autoplay loop>
+        <source src="pulse-theme-placeholder.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <!-- Settings button -->
+    <button class="settings-btn" id="settings-btn"></button>
+    <!-- Settings panel -->
+    <div class="settings" id="settings-panel">
+        <label for="volume">Volume</label>
+        <input id="volume" type="range" min="0" max="1" step="0.01" value="0.5">
+        <label class="contrast-toggle">
+            <input id="contrast-toggle" type="checkbox">
+            High Contrast Mode
+        </label>
+    </div>
+    <script>
+        // Volume control
+        const audio = document.getElementById('background-audio');
+        const volumeSlider = document.getElementById('volume');
+
+        // Check if audio element is loaded
+        audio.addEventListener('canplay', () => {
+            console.log('Audio can be played');
+        });
+
+        volumeSlider.addEventListener('input', () => {
+            audio.volume = volumeSlider.value;
+        });
+
+        // High contrast mode
+        const contrastToggle = document.getElementById('contrast-toggle');
+        contrastToggle.addEventListener('change', () => {
+            document.body.classList.toggle('high-contrast', contrastToggle.checked);
+        });
+
+        // Toggle settings panel visibility
+        const settingsBtn = document.getElementById('settings-btn');
+        const settingsPanel = document.getElementById('settings-panel');
+
+        settingsBtn.addEventListener('click', () => {
+            settingsPanel.style.display = settingsPanel.style.display === 'block' ? 'none' : 'block';
+        });
+    </script>
 </body>
 </html>
