@@ -298,5 +298,28 @@
             </div>
         </div>
     </div>
+    <script>
+        const inputSequence = [];
+        const unlockSequence = ['p', 'p', 'ArrowRight', 'k', 'h'];
+
+        window.addEventListener('keydown', (event) => {
+            // Check if the input is part of the defined sequence
+            if (event.key === 'p' || event.key === 'k' || event.key === 'h') {
+                inputSequence.push(event.key);
+            } else if (event.key === 'ArrowRight') {
+                inputSequence.push('ArrowRight');
+            }
+
+            // Limit the length of the sequence array to the length of the unlock sequence
+            if (inputSequence.length > unlockSequence.length) {
+                inputSequence.shift(); // Remove the oldest entry
+            }
+
+            // Check if the current input sequence matches the unlock sequence
+            if (inputSequence.join(',') === unlockSequence.join(',')) {
+                window.location.href = 'fighting.html'; // Redirect to fighting.html
+            }
+        });
+    </script>
 </body>
 </html>
