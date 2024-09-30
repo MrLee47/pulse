@@ -173,52 +173,25 @@
         <div class="main-content">
             <div class="content-wrapper">
                 <!-- Your content here -->
+
+                <p>Your characters Origins include their innate traits, things that are innate to your character before your Class, built in to your character since birth. Although many of the things can be improved, they are also intrisic to your character and apply to all characters.</p>
+                <p><b>Speed</b></p>
+                <p>Your speed is a number of meters equal to 5 times your Dexterity Score. </p>
+                
+<p><b>Might</b></p>
+                <p>You can lift a number of kilograms equal to 50 times your Power Score times 2 if your character is Small, times 5 if your character is Large, without effort. You can lift up 5 times that amount with rolls and at least some amount of struggle.
+</p>
+                <p><b>Shape:</b>You can choose any height between 150 and 250 cm traditionally, but any is allowed. Your weight can also be anything, but is traditionally between 25 and 200 kg depending on height. There are 3 size brackets that help determine some stats and can settle certain conflicts in game.
+</p>
+                <l>Small - Less than 160 cm or under 45 kg (5'3 and 100 lbs)</l>
+<l>Medium - Less than 190 cm or under 100 kg (6'2 and 200 lbs)
+</l>
+                <l>Large - Above 200 cm or above 120 kg  (6'6 and 265 lbs)</l>
+                
+<p>There are some cases where you land between two size brackets, in which case you and your GM decide which is more fitting.</p>
             </div>
         </div>
     </div>
-    <!-- Background audio -->
-    <audio id="background-audio" autoplay loop>
-        <source src="pulse-theme-placeholder.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-    </audio>
-    <!-- Settings button -->
-    <button class="settings-btn" id="settings-btn"></button>
-    <!-- Settings panel -->
-    <div class="settings" id="settings-panel">
-        <label for="volume">Volume</label>
-        <input id="volume" type="range" min="0" max="1" step="0.01" value="0.5">
-        <label class="contrast-toggle">
-            <input id="contrast-toggle" type="checkbox">
-            High Contrast Mode
-        </label>
-    </div>
-    <script>
-        // Volume control
-        const audio = document.getElementById('background-audio');
-        const volumeSlider = document.getElementById('volume');
-
-        // Check if audio element is loaded
-        audio.addEventListener('canplay', () => {
-            console.log('Audio can be played');
-        });
-
-        volumeSlider.addEventListener('input', () => {
-            audio.volume = volumeSlider.value;
-        });
-
-        // High contrast mode
-        const contrastToggle = document.getElementById('contrast-toggle');
-        contrastToggle.addEventListener('change', () => {
-            document.body.classList.toggle('high-contrast', contrastToggle.checked);
-        });
-
-        // Toggle settings panel visibility
-        const settingsBtn = document.getElementById('settings-btn');
-        const settingsPanel = document.getElementById('settings-panel');
-
-        settingsBtn.addEventListener('click', () => {
-            settingsPanel.style.display = settingsPanel.style.display === 'block' ? 'none' : 'block';
-        });
-    </script>
+  
 </body>
 </html>
