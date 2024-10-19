@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classes - Knight</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Proxima+Nova&display=swap" rel="stylesheet">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Proxima Nova', sans-serif;
+            background-color: #d5f7f3; /* Light grey/desaturated seafoam green */
+            color: #000;
+        }
+
+        header {
+            width: 100%;
+            max-width: 1200px; /* Match the container max-width */
+            margin: 0 auto; /* Center the header */
+            padding: 20px;
+            background-color: #000000; /* Black background for header */
+            border-bottom: 5px solid #000000;
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        header h1 {
+            font-family: 'Lexend', sans-serif;
+            font-size: 3em;
+            color: #ffffff; /* Change text color to white */
+            margin: 0;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0;
+            height: calc(100vh - 80px); /* Adjust height to fit within viewport minus header */
+            box-sizing: border-box;
+        }
+
+        .sidebar {
+            width: 250px; /* Fixed width for sidebar */
+            padding: 20px;
+            background-color: #f0f0f0; /* Light grey */
+            border-right: 5px solid #000000;
+            box-sizing: border-box;
+            height: 100%;
+            overflow-y: auto; /* Add scrollbar if content overflows */
+        }
+
+        .sidebar img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        .sidebar a {
+            display: block;
+            margin: 10px 0; /* Add margin for separation */
+            padding: 10px 15px; /* Add padding for a button-like feel */
+            color: #000; /* Set link color to black */
+            text-decoration: none;
+            font-weight: bold;
+            font-family: 'Lexend', sans-serif;
+            background-color: #fff; /* White background for button */
+            border: 2px solid #000; /* Black border */
+            border-radius: 5px; /* Rounded corners */
+            transition: background-color 0.3s; /* Remove transition for color */
+        }
+
+        .sidebar a:hover {
+            background-color: #01e8d4; /* Change background color on hover */
+            /* No border color change on hover */
+        }
+
+        .main-content {
+            flex: 1;
+            padding: 20px;
+            background: url('bg.webp') no-repeat center center;
+            background-size: cover;
+            position: relative;
+            box-sizing: border-box;
+            overflow-y: auto;
+            color: #000;
+        }
+
+        .main-content .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5); /* Optional: Adds a dark overlay to improve text readability */
+            z-index: 1;
+        }
+
+        .main-content .content-wrapper {
+            position: relative;
+            z-index: 2;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent white background */
+            border-radius: 10px;
+        }
+
+        .content {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Home</h1>
+    </header>
+    <div class="container">
+        <div class="sidebar">
+            <img src="gg.jpg" alt="Banner">
+            <a href="index.html">Home</a>
+            <a href="classes.html">Classes</a>
+            <a href="origins.html">Origins</a>
+            <a href="items.html">Items</a>
+          </div>
+        <div class="main-content">
+            <div class="content-wrapper">
+                <h3>Health</h3>
+                <p><b>Health per Level:</b> 8 + Constitution </p> 
+                <p><b>Health Die:</b> 1d8 per Level</p>
+                <h3> Telekenesis:</h3>
+                <p>When you choose this class, you gain the following options to use on creatures and objects in kilograms equal to 5 times your Mind Score:</p>
+<li><b> Shunt:</b>You can push a target up 5 meters (16 ft) in any direction, or pull them towards you the same distance.</li>
+<li><b>Grasp:</b> You grab a target holding it in place until your next turn. It is unable to use actions. </li>
+<li><b>Launch:</b> You launch a target up to 30 meters (99 ft) the air.</li>
+<p>They can be used in Reaction to an attack or creature entering your range targeting the creature that activated it, replacing an attack on your turn, or as a Bonus Action. You may also move items within your weight range freely, not requiring any kind of action. Additionally you can attack creatures even if they are Incorporeal. </p>
+</p>
+                <h3>Psyche Burst:</h3>
+                <p>As an action or in reaction to an attack, all creatures within 10 meters must make a Constitution check against your Mind score are pushed back 2 meters (6 ft). Whether or not they succeed they also take 3d6 + Mind in psychic damage. You also take the same Psychic damage if its used as a Reaction.</p>
+              
+                <h3> 1st Level Traits</h3>
+
+                  <p><b>  Empathic Feedback</b> (Cost 1):</p>
+                <p> Type: Passive </p>
+                <p> Whenever you are attacked, if the attack hits, the attacker takes damage equal to your Mind modifier.    </p>  
+
+                <div class="ability">
+            <p><b>Hyper Dash</b> (Cost 1):</p>
+            <p>Type: Bonus Action</p>
+            <p>As a Bonus Action after you use your Movement Action, you can propel yourself 5 meters (16 ft) in any direction. This can be used in the air during Levitation or a Jump.</p>
+        </div>
+
+        <div class="ability">
+            <p><b>Levitate</b> (Cost 1):</p>
+            <p>Type: Passive</p>
+            <p>You can fly up to 3 meters (9 ft) off of the ground. Additionally, you become immune to environmental hazards from the ground.</p>
+        </div>
+
+        <div class="ability">
+            <p><b>Mental Overload</b> (Cost 2):</p>
+            <p>Type: Once per Encounter</p>
+            <p>You can use your Main Action to quadruple the weight allowed for Telekinesis, and double the dice for Psyche Burst. You can halve all psychic damage, gain an additional reaction, and add 2d6 psychic damage to your unarmed strikes. These effects end after 30 seconds, and you have a -2 disadvantage on all rolls and all passive abilities deactivate until the encounter ends.</p>
+        </div>
+
+        <div class="ability">
+            <p><b>Moonstep</b> (Cost 1):</p>
+            <p>Type: Bonus Action</p>
+            <p>You can jump up a number of meters up to 30 times your Mind Score.</p>
+        </div>
+
+        <div class="ability">
+            <p><b>Psychic Shield</b> (Cost 1):</p>
+            <p>Type: Reaction</p>
+            <p>As a Reaction you can put up a barrier from an attack, with a soak equal to your Mind score. It lasts until the end of the current turn, or until it takes enough damage to break.</p>
+        </div>
+
+        <div class="ability">
+            <p><b>Psycho Power</b> (Cost 1):</p>
+            <p>Type: Passive</p>
+            <p>When you attack a creature with a Psychic Trait, weapon you're holding, or unarmed attack, you can apply the Psycho status effect until the end of your turn. The target has a -3 disadvantage on Mind checks and is unable to move or use Reactions while they have the Psycho effect.</p>
+        </div>
+
+        <div class="ability">
+            <p><b>Reflexive Psyche</b> (Cost 2):</p>
+            <p>Type: Passive</p>
+            <p>You have a +2 advantage on checks against spells, as well as an additional Reaction.</p>
+        </div>
+
+        <div class="ability">
+            <p><b>Resonance</b> (Cost 1):</p>
+            <p>Type: Main Action</p>
+            <p>You can create a ring around you with a 3 meter (9 ft) width. Other creatures can't advance past this ring. It dissipates at the start of your next turn.</p>
+        </div>
+
+        <div class="ability">
+            <p><b>Telepathic Link</b> (Cost 2):</p>
+            <p>Type: Passive</p>
+            <p>You can telepathically communicate with any creature in sight and make a Link with a number of creatures equal to your Mind modifier as a Bonus Action, and establishing a Link requires them to be within eyesight. You can communicate with the Linked creatures no matter the range.</p>
+       
+<h3>6th Level Traits</h3>
+<p><b>Detect Thoughts</b> (Cost 1):</p>
+<p>Type: Passive</p>
+<p>You can automatically detect the surface level emotions and thoughts of a creature within 5 meters (16 ft) if you choose.</p>
+
+<p><b>Emotional Outburst</b> (Cost 2):</p>
+<p>Type: Bonus Action</p>
+<p>As a Bonus Action on your turn you can apply an Emotion to your psyche granting different effects. Choose an Emotion from the list, you have the effects until the start of your next turn.
+</p>
+<l>Anger: You gain a +2 advantage on attacks and the weight limits for Telekinesis double.</l>
+<l>Joy: Allies within 5 meters (16 ft) gain a +2 advantage on their next check.</l>
+<l>Sadness: You have a +3 advantage on your next check.</l>
+
+            <p><b>Kinetic Redirection</b> (Cost 1):</p>
+            <p>Type: Reaction</p>
+            <p>When hit by an attack you can reduce the damage by half your level + your Mind modifier. The attacker then takes that much damage back in Psychic damage.</p>
+
+            <p><b>Overwhelming Empath</b> (Cost 2):</p>
+            <p>Type: Bonus Action</p>
+            <p>As a Bonus Action you can overwhelm a creature with emotions. Choose an Emotion from the list, they gain that effect until the end of their next turn:</p>
+            <l>Anger: The target attacks the closest creature without discrimination on its turn and has a -2 disadvantage on Mind checks.</l>
+            <l>Joy: The target has a -2 disadvantage on attacks.</l>
+</l> Sadness: The target has disadvantage on Aura checks and creatures have a +2 advantage on attacks against it.</l>
+
+        <p><b>Portal Step</b> (Cost 2):</p>
+        <p>Type: Bonus Action</p>
+        <p>You can choose a place within 45 meters (147 ft) of you and create a portal, instantly teleporting there. At the end of your next turn, the portal disappears. Other creatures may enter the portal. You can use this a number of times equal to your Mind modifier per rest.
+        </p>
+
+            <p><b>Psychic Amplification</b> (Cost 1):</p>
+            <p>Type: Bonus Action</p>
+            <p>As a Bonus Action you can double the range, attack, or duration of one Psychic Trait.</p>
+
+            <p><b>Telekenetic Tornado</b> (Cost 2):</p>
+            <p>Type: Once per Encounter</p>
+            <p>As a Main Action you create a swirling vortex of energy within a 10 meter (33 ft) radius lifting all creatures and unsecured objects in the radius into the air. All creatures must make a Power check or be launched 30 meters (99 ft) into the air. </p>
+<h3>13th Level Traits</h3>
+            <p><b>Astral Projection</b> (Cost 2):</p>
+<p>Type: Double Action</p>
+<p>As a Double Action you can project your spirit, leaving your body Stunned. You become ethereal and can pass through solid objects taking twice the speed it would take to walk normally. Your spirit cannot be attacked or make attacks with weapons or unarmed strikes in this form, but can use your Psychic Traits. You must stay within 5 kilometers (16,500 ft). You can return to your body as a Main Action.</p>
+
+<p><b>Gravity Shift</b> (Cost 2):</p>
+<p>Type: Main Action</p>
+<p>As your Main Action you can increase or decrease the gravity in a 10 meter (33 ft) sphere centered on yourself. Choose one:</p>
+            <l>Low Gravity: Creatures can walk upward into the air without using any extra speed.</l>
+<l>High Gravity: Creatures make a Difficulty 12 Constitution check or get Knocked.</l>
+
+<p><b>Telekinetic Barrier</b> (Cost 2):</p>
+<p>Type: Double Action</p>
+<p>As a Double Action you can form a 5 meter (16 ft) tall by 8 meter (26 ft) wide wall. It is impassable without magic and cannot be passed by incorporeal creatures. However, you can teleport through it.</p>
+
+<p><b>Thought Shield</b> (Cost 1):</p>
+<p>Type: Passive</p>
+<p>You are immune to having your thoughts read in any way, and can halve Psychic damage.</p>
+
+            <h3>17th Level Traits</h3>
+<p><b>Information Influx</b> (Cost 3):</p>
+<p>Type: Reaction</p>
+<p>You can flood a creature within sight's mind when they make a roll as a Reaction. You can give them a -2 disadvantage or +2 advantage on their next non-Constitution based roll.</p>
+
+<p><b>Mental Barrier</b> (Cost 3):</p>
+<p>Type: Main Action</p>
+<p>You summon a barrier in a 1 meter (3 ft) radius around you. It absorbs all incoming damage until it takes damage equal to your level times 10. This can be used twice per encounter.</p>
+
+<p><b>Mind Break</b> (Cost 4):</p>
+<p>Type: Main Action</p>
+<p>Choose a creature within Telekinesis range and force it to roll a Mind check against your Mind Score. If it fails, it takes 8d8 damage and gains the Stunned effect for an amount of time equal to 10 seconds times the amount they failed by.</p>
