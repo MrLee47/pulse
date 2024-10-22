@@ -1,1 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classes - Rogue</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Proxima+Nova&display=swap" rel="stylesheet">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Proxima Nova', sans-serif;
+            background-color: #d5f7f3; /* Light grey/desaturated seafoam green */
+            color: #000;
+        }
 
+        header {
+            width: 100%;
+            max-width: 1200px; /* Match the container max-width */
+            margin: 0 auto; /* Center the header */
+            padding: 20px;
+            background-color: #000000; /* Black background for header */
+            border-bottom: 5px solid #000000;
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        header h1 {
+            font-family: 'Lexend', sans-serif;
+            font-size: 3em;
+            color: #ffffff; /* Change text color to white */
+            margin: 0;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0;
+            height: calc(100vh - 80px); /* Adjust height to fit within viewport minus header */
+            box-sizing: border-box;
+        }
+
+        .sidebar {
+            width: 250px; /* Fixed width for sidebar */
+            padding: 20px;
+            background-color: #f0f0f0; /* Light grey */
+            border-right: 5px solid #000000;
+            box-sizing: border-box;
+            height: 100%;
+            overflow-y: auto; /* Add scrollbar if content overflows */
+        }
+
+        .sidebar img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        .sidebar a {
+            display: block;
+            margin: 10px 0; /* Add margin for separation */
+            padding: 10px 15px; /* Add padding for a button-like feel */
+            color: #000; /* Set link color to black */
+            text-decoration: none;
+            font-weight: bold;
+            font-family: 'Lexend', sans-serif;
+            background-color: #fff; /* White background for button */
+            border: 2px solid #000; /* Black border */
+            border-radius: 5px; /* Rounded corners */
+            transition: background-color 0.3s; /* Remove transition for color */
+        }
+
+        .sidebar a:hover {
+            background-color: #01e8d4; /* Change background color on hover */
+            /* No border color change on hover */
+        }
+
+        .main-content {
+            flex: 1;
+            padding: 20px;
+            background: url('bg.webp') no-repeat center center;
+            background-size: cover;
+            position: relative;
+            box-sizing: border-box;
+            overflow-y: auto;
+            color: #000;
+        }
+
+        .main-content .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5); /* Optional: Adds a dark overlay to improve text readability */
+            z-index: 1;
+        }
+
+        .main-content .content-wrapper {
+            position: relative;
+            z-index: 2;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent white background */
+            border-radius: 10px;
+        }
+
+        .content {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Home</h1>
+    </header>
+    <div class="container">
+        <div class="sidebar">
+            <img src="gg.jpg" alt="Banner">
+            <a href="index.html">Home</a>
+            <a href="classes.html">Classes</a>
+            <a href="origins.html">Origins</a>
+            <a href="items.html">Items</a>
+          </div>
+        <div class="main-content">
+            <div class="content-wrapper">
+                <h3>Health</h3>
+                <p><b>Health per Level:</b> 6 + Constitution </p> 
+                <p><b>Health Die:</b> 1d6 per Level</p>
+                <h3>Sharp Stealth:</h3>
+                <p>When you choose this class, you can hide as part of any movement action. Additionally, when you deal damage with a weapon you can immediately take another Movement Action. You may only use this up to twice on your turn, or up to 5 times at level 15.</p>
+                <h3>Ghostly Dash:</h3>
+                <p>As a reaction to being attacked, you can add your Dexterity modifier to your Armor. If this allows you to dodge the attack, you can move 5 meters (16 ft) in any direction, and your Speed is doubled. Additionally, you can no longer be attacked on your turn if you move in or out of a creatures range, and if you use a Movement Action on your turn your Armor increases by 2 until the start of your next turn.</p>
+              
+              <h3> 1st Level Traits</h3>
+
+<p><b>Ambush Tactics</b> (Cost 1):</p>
+<p>Type: Passive</p>
+<p>You have a +5 advantage to attack targets that haven't gone in combat yet.</p>
+
+<p><b>Expertise</b> (Cost 2):</p>
+<p>Type: Passive</p>
+<p>Choose two different Skills. Add a +2 to your proficiency with them. The maximum for these skills increases to +8.</p>
+
+<p><b>National Acrobat</b> (Cost 1):</p>
+<p>Type: Passive</p>
+<p>You can run up walls when you use a Movement Action, but you can't remain on a wall for more than a round.</p>
+
+<p><b>Points of Authority</b> (Cost 1):</p>
+<p>Type: Passive</p>
+<p>When you deal damage with a Dagger, add +2 to the damage dealt.</p>
+
+<p><b>Go With the Flow</b> (Cost 1):</p>
+<p>Type: Movement Action</p>
+<p>You can automatically escape from a Grab or other non-magical shackles. You cannot automatically escape the Grab of a person with the Grappler Fighting Style.</p>
+
+<p><b>Shadow Strike</b> (Cost 2):</p>
+<p>Type: Movement Action</p>
+<p>If you are Hiding, you can move 5 meters (16 ft) and make an attack against a creature within range, adding 1d6 damage to the attack. If you have Sharp Stealth, you can move your full speed when using this.</p>
+
+<p><b>Silent Communication</b> (Cost 1):</p>
+<p>Type: Passive</p>
+<p>You can communicate simple messages and intentions to nearby allies without speaking or making any obvious movements.</p>
+
+<p><b>Silent Takedown</b> (Cost 1):</p>
+<p>Type: Bonus Action</p>
+<p>While you have a creature Grabbed, you can use a Bonus Action to incapacitate the creature as long as its Constitution is less than your Power.</p>
+
+<p><b>Slasher</b> (Cost 1):</p>
+<p>Type: Passive</p>
+<p>When you deal damage to a creature with a Sword or Dagger weapon, the creature takes an additional die of damage at the start of its turn.</p>
+
+<p><b>Tactical Thinking</b> (Cost 1):</p>
+<p>Type: Bonus Action</p>
+<p>You can now Disengage, Dodge, or Help as a Bonus Action rather than a Main Action.</p>
+
+<h3> 6th Level Traits</h3>
+                <p><b>Absent Minded</b> (Cost 1):</p>
+<p>Type: Bonus Action</p>
+<p>You can remove the Stunned effect from yourself as a Bonus Action. Additionally, you take halved damage from critical attacks.</p>
+
+<p><b>All-out War</b> (Cost 2):</p>
+<p>Type: Passive</p>
+<p>You can attack as a Reaction during your turn, but you must do it immediately after your Main Action. This Reaction can only be one attack.</p>
+
+<p><b>Beastly Regeneration</b> (Cost 1):</p>
+<p>Type: Passive</p>
+<p>You heal twice as much from all sources, including Health Die.</p>
+
+<p><b>Defensive Positioning</b> (Cost 1):</p>
+<p>Type: Bonus Action</p>
+<p>As a Bonus Action, you become immune to any effect that could slow you down, such as a Trait or specific terrain until the start of your next turn.</p>
+
+<p><b>Mighty Constitution</b> (Cost 2):</p>
+<p>Type: Passive</p>
+<p>When you roll a Constitution check or skill, you can use your Constitution Score instead.</p>
+
+<p><b>Primal Instinct</b> (Cost 2):</p>
+<p>Type: Passive</p>
+<p>You gain an additional Reaction if you don't attack on your turn.</p>
+
+<p><b>Unstoppable Champion</b> (Cost 2):</p>
+<p>Type: Passive</p>
+<p>You halve all damage taken during Overpowering Resilience.</p>
+
+                <h3> 13th Level Traits</h3>
+
+<p><b>Cataclysmic Strike</b> (Cost 2):</p>
+<p>Type: Main Action</p>
+<p>You unleash a devastating strike. Make a melee attack that deals 8d10 Physical damage. If the attack hits, all creatures within a 5-meter (16 ft) radius of the target take 3d10 Physical damage.
+</p>
+
+                
+<p><b>Colossal Charge</b> (Cost 2):</p>
+<p>Type: Main Action</p>
+<p>You can attempt a powerful charge at a target within 15 meters (50 ft). If you reach the target, make a melee attack that deals 6d10 Physical damage and pushes the target 5 meters (16 ft) away from you. On a hit, you can also choose to knock the target prone.
+</p>
+
+                
+<p><b>Earthshattering Stomp</b> (Cost 2):</p>
+<p>Type: Double Action</p>
+<p>You stomp the ground forcefully, creating a shockwave. All creatures within a 10-meter (33 ft) radius must make a Strength saving throw. On a failure, they take 4d8 Physical damage and are knocked prone. On a success, they take half damage and are not knocked prone.
+</p>
+
+                
+<p><b>Impassable Barrier</b> (Cost 1):</p>
+<p>Type: Reaction</p>
+<p>As a Reaction to an attack you can increase your Armor by 4 until the end of the enemies turn. If the attack still hits you gain resistance to that kind of damage until the start of your next turn.
+</p>
+
+                
+<p><b>Indomitable Will</b> (Cost 2):</p>
+<p>Type: Reaction</p>
+<p>When you are hit by an attack, you can use your reaction to roll a Constitution saving throw against the attack. On a success, you fully negate the damage and gain health equal to the damage taken.</p>
+                <h3> 17th Level Traits</h3>
+<p><b>Health Up</b> (Cost 3):</p>
+<p>Type: Passive</p>
+<p>Your Maximum Health increase by 10 times your Consitution Score.</p>
+
+                <p><b>Overpowering Victory</b> (Cost 5):</p>
+<p>Type: Double Action</p>
+<p>You make a single melee attack. You lose all Health granted by Overpowering Resilience. Add 1d10 Explosive damage per 5 Health lost to this attack. You also take 5d10 Physical damage.
+</p>
+                
+                <p><b>Worldbreaker</b> (Cost 4):</p>
+<p>Type: Double Action</p>
+<p>You unleash a catastrophic attack that shakes the very ground beneath you. Choose a point within 30 meters (99 ft). All creatures within a 10-meter (33 ft) radius take 10d10 Physical damage. Additionally, the ground causes all enemies speed to be halved for 1 minute, and they are knocked prone.</p>
+
+                
+                
+            </div>
+        </div>
+    </div>
+</body>
+</html>
