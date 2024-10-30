@@ -1,1 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classes - Sorcerer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Proxima+Nova&display=swap" rel="stylesheet">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Proxima Nova', sans-serif;
+            background-color: #d5f7f3; /* Light grey/desaturated seafoam green */
+            color: #000;
+        }
 
+        header {
+            width: 100%;
+            max-width: 1200px; /* Match the container max-width */
+            margin: 0 auto; /* Center the header */
+            padding: 20px;
+            background-color: #000000; /* Black background for header */
+            border-bottom: 5px solid #000000;
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        header h1 {
+            font-family: 'Lexend', sans-serif;
+            font-size: 3em;
+            color: #ffffff; /* Change text color to white */
+            margin: 0;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0;
+            height: calc(100vh - 80px); /* Adjust height to fit within viewport minus header */
+            box-sizing: border-box;
+        }
+
+        .sidebar {
+            width: 250px; /* Fixed width for sidebar */
+            padding: 20px;
+            background-color: #f0f0f0; /* Light grey */
+            border-right: 5px solid #000000;
+            box-sizing: border-box;
+            height: 100%;
+            overflow-y: auto; /* Add scrollbar if content overflows */
+        }
+
+        .sidebar img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        .sidebar a {
+            display: block;
+            margin: 10px 0; /* Add margin for separation */
+            padding: 10px 15px; /* Add padding for a button-like feel */
+            color: #000; /* Set link color to black */
+            text-decoration: none;
+            font-weight: bold;
+            font-family: 'Lexend', sans-serif;
+            background-color: #fff; /* White background for button */
+            border: 2px solid #000; /* Black border */
+            border-radius: 5px; /* Rounded corners */
+            transition: background-color 0.3s; /* Remove transition for color */
+        }
+
+        .sidebar a:hover {
+            background-color: #01e8d4; /* Change background color on hover */
+            /* No border color change on hover */
+        }
+
+        .main-content {
+            flex: 1;
+            padding: 20px;
+            background: url('bg.webp') no-repeat center center;
+            background-size: cover;
+            position: relative;
+            box-sizing: border-box;
+            overflow-y: auto;
+            color: #000;
+        }
+
+        .main-content .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5); /* Optional: Adds a dark overlay to improve text readability */
+            z-index: 1;
+        }
+
+        .main-content .content-wrapper {
+            position: relative;
+            z-index: 2;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent white background */
+            border-radius: 10px;
+        }
+
+        .content {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Home</h1>
+    </header>
+    <div class="container">
+        <div class="sidebar">
+            <img src="gg.jpg" alt="Banner">
+            <a href="index.html">Home</a>
+            <a href="classes.html">Classes</a>
+            <a href="origins.html">Origins</a>
+            <a href="items.html">Items</a>
+          </div>
+        <div class="main-content">
+            <div class="content-wrapper">
+                <h3>Health</h3>
+                <p><b>Health per Level:</b> 6 + Constitution </p> 
+                <p><b>Health Die:</b> 1d10 per Level</p>
+                <h3>Mana Manipulation:</h3>
+                <p>When you choose this class, you can as a Bonus Action manipulate latent mana, adding a die equal to your Intelligence in Magic damage to your next Trait ability or unarmed attack. This increases to two die at level 8, and three die at level 16.</p>
+                <h3>Perfect Impact:</h3>
+                <p>When you roll a Critical Attack with an unarmed strike, Mana Manipulation is automatically applied for the next 20 seconds. Your Critical Range then expands by one.  Getting another critical with an unarmed strike during this time resets the timer, and expands your Critical Range by 1 again, and it repeats until your attacks are Critical on all but a 1. Then, the timer resets on a Critical Attack, but your Critical Range no longer expands.</p>
+                <h3>Innate Talent</h3>:</h3>
+                <p>You can choose one Sorcerous Talent trait for free upon picking this Class. You gain the Innate ability of this trait.</p>
+                <h3> 1st Level Traits</h3>
+
+                <p><b>Arcane Gate</b> (Cost 2):</p>
+<p>Type: Sorcerous Talent</p>
+<p>As a Bonus Action, you can create a set of 2 meter by 1 meter (6 x 3 ft) doors somewhere within sight. If someone walks through them, the doors automatically close on them, dealing 3d6 force damage. You can use a Reaction at any point to close them early, creating an impassable magic barrier, or use your Main Action to create them around a target, immediately dealing the damage. All doors disappear at the start of your next turn.</p> 
+<p>If you chose this as your Innate Talent, you can place two of these doors as a Bonus Action and can connect two of the doors, causing them to become linked. If anything passes through one, it appears out of the other. Linked doors don't deal damage unless you use a Reaction to close it on a person passing through the door.</p>
+
+<p><b>Counterspell</b> (Cost 2):</p>
+<p>Type: Reaction</p>
+<p>When targeted by any Trait ability, you may choose to use your Reaction to negate the effect. It costs 1 charge to block a 1st level trait, 2 charges for a 6th level trait, 3 for a 13th level, and 4 for a 17th level trait. This has charges equal to your Aura Score per encounter.</p>
+
+<p><b>Curse Infusion</b> (Cost 1):</p>
+<p>Type: Bonus Action</p>
+<p>As a Bonus Action, you can infuse an object with mana, adding an additional 1d6 force damage to the next attack with it and making it have a detectable amount of magic.</p>
+
+<p><b>Mitigate Damage</b> (Cost 2):</p>
+<p>Type: Passive</p>
+<p>When you use Health Die to heal, you heal additional Health equal to your Aura score per die spent.</p>
+
+<p><b>Mystic Aura</b> (Cost 1):</p>
+<p>Type: Passive</p>
+<p>You can add an additional force damage equal to your Aura modifier to any unarmed attack or sorcerer Trait. Additionally, your armor is increased by 1. This can be turned on and off as a Bonus Action, but while active you also exude a large amount of magic that can be easily detected even without magic detection.</p>
+
+<p><b>Plane Shifter</b> (Cost 2):</p>
+<p>Type: Sorcerous Talent</p>
+<p>As a Bonus Action, you can teleport 5 meters (16 ft) in any direction.</p>
+<p>If you chose this as your Innate Talent, you can use this as a Reaction to being attacked, and when you use it as a Bonus Action, if you teleport within 1 meter (3 ft) of another creature, you can immediately make an unarmed attack as a free action. Additionally, rather than just teleporting, you can swap places with another creature in range or swap the places of two creatures within range.</p>
+
+<p><b>Rough Mana</b> (Cost 2):</p>
+<p>Type: Sorcerous Talent</p>
+<p>As a Bonus Action, you can fire a projectile within 10 meters (33 ft) that deals 2d6 force damage. Additionally, as a Reaction, you can make a Shield that adds a +2 to your Armor.</p>
+<p>If you chose this as your Innate Talent, you use your Main Action to shoot a forceball with a 10 meter radius within 30 meters of you. Everyone in the radius must make a Dexterity check or take 4d8 Explosive damage.</p>
+
+<p><b>Shadow Manipulation</b> (Cost 2):</p>
+<p>Type: Sorcerous Talent</p>
+<p>As a Bonus Action, you can make the area around you become shrouded in darkness, giving all creatures within 10 meters (33 ft) other than you a -4 disadvantage on their attacks.</p>
+<p>If you chose this as your Innate Talent, during your Movement Actions, you can traverse through the shadows. There must be darkness for you to move through, and if you do move through the shadows, you cannot be attacked and can teleport to other shadows within sight. You are immediately sent out of the shadows at the end of your turn.</p>
+
+<p><b>Temporal Shift</b> (Cost 2):</p>
+<p>Type: Once per Encounter</p>
+<p>Once per encounter, you can grant yourself and up to 5 allies an additional action. You may still only use one Main Action on your turn.</p>
+
+<p><b>Third Eye</b> (Cost 2):</p>
+<p>Type: Sorcerous Talent</p>
+<p>You can see into the Ethereal Plane, allowing you to see ghosts and other spirits. Additionally, any magic user or magic item has a faint glowing aura off of them for you. </p>
+<p>Additionally, if you choose this as your Innate Talent, as a Bonus Action, you can reveal all magic that has its aura suppressed from magic detection in a 15 meter (49 ft) radius.</p>
+
+                <h3> 6th Level Traits</h3>
+<p><b>Duelist Art: Perfect Parry</b> (Cost 1):</p>
+<p>Type: Reaction</p>
+<p>You must have the Duelist Trait. As a Reaction when someone hits you with an attack, you can add +2 to your Armor. If this causes the attack to miss, you can immediately make an attack, adding 1d8 to the attack.</p>
+
+<p><b>Soldier On!</b> (Cost 1):</p>
+<p>Type: Passive</p>
+<p>You have a +5 advantage to Constitution checks made to resist non-magical effects.</p>
+
+<p><b>Grappler Art: Python Grip</b> (Cost 1):</p>
+<p>Type: Main Action</p>
+<p>You must have the Grappler Trait. When you Grab a creature, you can replace an attack with a Crush. This deals 2d8 + Power die in bludgeoning damage and ignores Armor. Using this causes you to drop the creature.</p>
+<p>Additionally, you gain a new Reaction called Reversal. If a creature tries to escape your Grab, you can roll your Power die and add it to the Difficulty of the roll.</p>
+
+<p><b>Indomitable Resolve</b> (Cost 1):</p>
+<p>Type: Once per Encounter</p>
+<p>Once per Encounter when you fail a roll, you may choose to completely reroll that roll.</p>
+
+<p><b>Pugilism Arts: Martial Arts</b> (Cost 2):</p>
+<p>Type: Main Action</p>
+<p>You may replace an attack with a leg sweep, Knocking the target but not dealing damage. Additionally, as a Main Action, you can do a Power Punch. You add your Level to the attack, and if you roll a Critical Attack on the Power Punch, you stun the creature for 10 seconds.</p>
+
+<p><b>Pugilism Art: Rolling Thunder</b> (Cost 1):</p>
+<p>Type: Bonus Action</p>
+<p>You must have the Pugilism Trait. As a Bonus Action, you can move half your speed without provoking attacks and allowing you to pass through the space of other creatures. Additionally, when you take damage from an unarmed attack, you can decrease the roll before it hits by a roll of your Constitution or Dexterity die.</p>
+
+<p><b>Ranger Art: Golden Eye</b> (Cost 1):</p>
+<p>Type: Bonus Action</p>
+<p>As a Bonus Action, you can mark a creature as your Target. While they are your Target, you have a +5 advantage on Perception checks to find them, and add an additional weapon die to ranged attacks against them. Additionally, you cannot have any disadvantage posed on your Perception checks and can identify creatures at double the range a normal creature could.</p>
+
+<p><b>Skirmishing Arts: Acrobat</b> (Cost 1):</p>
+<p>Type: Passive</p>
+<p>When you Jump, you may Jump a second time in the air as part of the same action. Additionally, you have a +2 advantage on Acrobatics checks.</p>
+
+<p><b>Skirmishing Arts: Evasive Assault</b> (Cost 1):</p>
+<p>Type: Main Action</p>
+<p>When you make an attack, you can move up to 10 feet immediately before or after the attack without provoking opportunity attacks. If you move before the attack, the target has disadvantage on their first attack against you until the start of your next turn. If you move after the attack, you can impose disadvantage on the first opportunity attack made against you before your next turn.</p>
+
+<p><b>Special Arts: Flying Uppercut</b> (Cost 1):</p>
+<p>Type: Bonus Action</p>
+<p>You must have the Special Arts Trait. As a Bonus Action, you can use a Flying Uppercut that deals 2d8 + Power in damage of your weapon's type. It has a range of 5 meters (16 ft) in the air and 1 meter (3 ft) also launches the target 5 meters (16 ft) into the air if they are grounded, or 3 meters (9 ft) away from you if they are airborne. It causes creatures in flight to be knocked down to the ground. It can also be used as a Reaction when a creature enters or leaves your range. This counts as an attack when used as a Reaction.</p>
+
+<p><b>Unwavering Precision</b> (Cost 1):</p>
+<p>Type: Passive</p>
+<p>Your Critical Hit range expands by one, as long as you roll any combination of the 2 highest numbers on your die, your attack counts as a Critical Hit.</p>
+
+<p><b>Weapon Proficiency</b> (Cost 1):</p>
+<p>Type: Passive</p>
+<p>You must have the Weapon Basics Trait. You gain a +2 to attacks with all weapons.</p>
+
+
+                <h3> 13th Level Traits</h3>
+
+                <p><b>Stone Cold Crazy</b> (Cost 2):</p>
+<p>Type: Bonus Action</p>
+<p>You give a creature within sight a +4 advantage against you as a Bonus Action. If that creature hits you, you can automatically take a full attack action targeting that creature without using a Reaction.</p>
+
+<p><b>Duelist Art: Focus Strike</b> (Cost 2):</p>
+<p>Type: Double Action</p>
+<p>You must have the Duelist Trait. As a Double Action, you can make a single attack, adding 4d6 + your Mind Score to the attack.</p>
+
+<p><b>Breaking the Law</b> (Cost 2):</p>
+<p>Type: Bonus Action</p>
+<p>You may use a Bonus Action, and if you do, the next attack you make decreases the target's Armor by 2, whether or not it hits.</p>
+
+<p><b>Grappler Art: Body Slam</b> (Cost 2):</p>
+<p>Type: Free Action</p>
+<p>You must have the Grappler Trait. When you use a Jump as your Movement Action, you can choose a creature within the range of your Jump to land on, making an attack for 2d10 + your Power die as a Free Action.</p>
+
+<p><b>The Last Stand</b> (Cost 2):</p>
+<p>Type: Reaction</p>
+<p>As a Reaction, when you are dropped to 0 Health and have no Health Die, you can return to 1 Health instead and immediately take a turn with a +5 advantage on all rolls during the rest of the round. Can be used once per rest.</p>
+
+<p><b>Pugilism Art: Grab Break</b> (Cost 1):</p>
+<p>Type: Reaction</p>
+<p>You must have the Pugilism Trait. As a Reaction to being Grabbed, you may immediately make an unarmed attack. If it hits, you are not Grabbed, and the Grabber is unable to use the Grab action for 1 minute or until they heal at least 5 Health.</p>
+
+<p><b>Ranger Art: Piercing Shot</b> (Cost 2):</p>
+<p>Type: Passive</p>
+<p>You must have the Ranger Trait. When you fire a projectile, you may choose another target within 1 meter (3 ft) to also take the damage. You may then choose another target within 5 feet (5 ft) of that creature that isn't the original target. You may repeat this process until there is no other creature you can hit.</p>
+
+<p><b>Skirmishing Art: Throwing Stars</b> (Cost 1):</p>
+<p>Type: Movement Action</p>
+<p>You can throw a thrown weapon as part of a Movement Action.</p>
+
+<p><b>Special Arts: Heavy Dash</b> (Cost 2):</p>
+<p>Type: Movement Action</p>
+<p>You must have the Special Arts Trait. You can move up to half your Movement as a Movement Action, and any creature within 1 meter (3 ft) of the path you took takes Explosive damage equal to your Dexterity die + your Power die. You can Grab a creature within 1 meter (3 ft) at the end of your Movement if able.</p>
+
+<p><b>Weapon Mastery</b> (Cost 1):</p>
+<p>Type: Passive</p>
+<p>You must have the Weapon Proficiency Trait. You gain a +2 to attacks with all weapons.</p>
+
+                <h3> 17th Level Traits</h3>
+
+                <p><b>Grappler Art: Boundless Piledriver</b> (Cost 3):</p>
+<p>Type: Once per Encounter</p>
+<p>As a Double Action, you can perform the Boundless Piledriver on a creature you have Grabbed, a creature within 1 meter (3 ft) around you, or 3 meters (9 ft) into the air above you. You then deal 10d10 + five of your Power Die in Explosive damage and jump 10 meters (33 ft) into the air. You can choose to drop the creature there or land with them. You don't take fall damage either way.</p>
+
+<p><b>Special Arts: Augmented Power</b> (Cost 3):</p>
+<p>Type: Once per Encounter</p>
+<p>As a Bonus Action, Once per Encounter, you can choose one of the following Augmented Power styles, which remain for 30 seconds:</p>
+<ul>
+  <li><b>Power of Absolute Offense:</b> Add 1d8 Explosive damage to your attacks, and you can make one additional attack when you use the attack action.</li>
+  <li><b>Power of Undying Defense:</b> Add a +2 to your Armor, you can't be moved against your will, and when you take damage that would drop you to 0 Health, you stay at 1 Health until this ends.</li>
+  <li><b>Power of True Speed:</b> Your movement speed is tripled, and you no longer need to target only one creature when you use Focused Flurry.</li>
+</ul>
+
+<p><b>True Power</b> (Cost 3):</p>
+<p>Type: Once per Encounter</p>
+<p>Once per Encounter, you can choose for an attack to ignore Armor and Resistances. It is automatically a Critical Attack.</p>
+
+<p><b>I Will Give You My All</b> (Cost 5):</p>
+<p>Type: Double Action</p>
+<p>For the next 4 minutes you are effectively immortal. Any time you take damage that is less than your maximum health, you immediately regenerate it, taking effectively no damage, and upon activation. Also your speed is tripled and you   </p>
+
+                
+
+                
+            </div>
+        </div>
+    </div>
+</body>
+</html>
