@@ -1,1 +1,162 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secret Character</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Proxima+Nova&display=swap" rel="stylesheet">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Proxima Nova', sans-serif;
+            background-color: #d5f7f3; /* Light grey/desaturated seafoam green */
+            color: #000;
+        }
+
+        header {
+            width: 100%;
+            max-width: 1200px; /* Match the container max-width */
+            margin: 0 auto; /* Center the header */
+            padding: 20px;
+            background-color: #000000; /* Black background for header */
+            border-bottom: 5px solid #000000;
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        header h1 {
+            font-family: 'Lexend', sans-serif;
+            font-size: 3em;
+            color: #ffffff; /* Change text color to white */
+            margin: 0;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0;
+            height: calc(100vh - 80px); /* Adjust height to fit within viewport minus header */
+            box-sizing: border-box;
+        }
+
+        .sidebar {
+            width: 250px; /* Fixed width for sidebar */
+            padding: 20px;
+            background-color: #f0f0f0; /* Light grey */
+            border-right: 5px solid #000000;
+            box-sizing: border-box;
+            height: 100%;
+            overflow-y: auto; /* Add scrollbar if content overflows */
+        }
+
+        .sidebar img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        .sidebar a {
+            display: block;
+            margin: 10px 0; /* Add margin for separation */
+            padding: 10px 15px; /* Add padding for a button-like feel */
+            color: #000; /* Set link color to black */
+            text-decoration: none;
+            font-weight: bold;
+            font-family: 'Lexend', sans-serif;
+            background-color: #fff; /* White background for button */
+            border: 2px solid #000; /* Black border */
+            border-radius: 5px; /* Rounded corners */
+            transition: background-color 0.3s; /* Remove transition for color */
+        }
+
+        .sidebar a:hover {
+            background-color: #01e8d4; /* Change background color on hover */
+            /* No border color change on hover */
+        }
+
+        .main-content {
+            flex: 1;
+            padding: 20px;
+            background: url('bg.webp') no-repeat center center;
+            background-size: cover;
+            position: relative;
+            box-sizing: border-box;
+            overflow-y: auto;
+            color: #000;
+        }
+
+        .main-content .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5); /* Optional: Adds a dark overlay to improve text readability */
+            z-index: 1;
+        }
+
+        .main-content .content-wrapper {
+            position: relative;
+            z-index: 2;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent white background */
+            border-radius: 10px;
+        }
+
+        .content {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Secret Character</h1>
+    </header>
+    <div class="container">
+        <div class="sidebar">
+            <img src="gg.jpg" alt="Banner">
+            <a href="index.html">Home</a>
+            <a href="classes.html">Classes</a>
+            <a href="origins.html">Origins</a>
+            <a href="items.html">Items</a>
+                  <a href="prestige.html">Prestige</a>
+          </div>
+        <div class="main-content">
+            <div class="content-wrapper">
+
+              <h3>Unique Trait</h3>
+              <p>If you choose the Blood Prestige you become stronger the lower your Health is. When you are below Maximum Health, add 1 to all attacks. When you are below 75% of your health, you add 2 to all attacks, decrease your Armor by 1, and your range increases by 1 meter (3 ft). When you are below 50% health, add 4 to all attacks, decrease your Armor by 1, and you range increases by 2 meters. When you are below 25% health, add 5 to all attacks, decrease your Armor by 2, and your range increases by 3 meters. If you are below 10% health, add 10 to all attacks, decrease Armor your by 5, and your range increases by 10 meters. The moment you hit 0 Health, you can immediately take a turn. The range increase does not apply to the Unarmed Attack granted by Bloodsucking Universe. </p>
+              
+              <h3>1st Level Traits</h3>
+              
+                <p><b>Vampiric Reflex:</b> (Cost 2):</p>
+                <p>If you successfully bite a target with your Bloodsucking Universe ability as part of your Main Action, you can choose to immediately take an additional action. This action can be a Main Action, but you can only gain this additional action once.</p>
+
+              <p><b>Vicious Counter:</b> (Cost 1):</p>
+              
+                
+                <h3>10th Level Traits</h3>
+                <p><b>Dragon Install</b> (Cost 3):</p>
+                <p>Type: Once per Encounter (Cooldown: 3 Encounters)</p>
+                <p>You become infused with firey energy, dealing an extra 1d8 Explosive damage with all attacks, tripling your Speed and Jump distance, and increasing your Armor by 2. It lasts for the rest of the encounter.</p>
+                
+              <p><b>Falcon Punch</b> (Cost 2):</p>
+<p>Main Action (Cooldown: 10 Rounds)</p>
+                <p>You punch someone. This deals 10d10 Explosive damage + Power Score in Physical damage.</p>
+                
+              <p><b>Raging Demon</b> (Cost 4):</p>
+                <p>Type: Double Action (Cooldown 10 rounds):</p>
+                <p>You give the Frozen effect to a target within range. Your speed is quintupled for the rest of this turn, and you must make 10 attacks against that target. You gain a +1 to melee attacks for 5 rounds afterwards.</p>
+        
+                
+            </div>
+        </div>
+    </div>
+</body>
+</html>
