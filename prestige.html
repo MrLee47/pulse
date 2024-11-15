@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pulse - Origins</title>
+    <title>Pulse - Classes</title>
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Proxima+Nova&display=swap" rel="stylesheet">
     <style>
@@ -11,7 +11,7 @@
             margin: 0;
             padding: 0;
             font-family: 'Proxima Nova', sans-serif;
-            background-color: #d5f7f3; /* Light grey/desaturated seafoam green */
+            background-color: #cffdff; /* Light grey/desaturated seafoam green */
             color: #000;
         }
 
@@ -89,22 +89,15 @@
             color: #000;
         }
 
-        .main-content .overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.5); /* Optional: Adds a dark overlay to improve text readability */
-            z-index: 1;
-        }
-
         .main-content .content-wrapper {
             position: relative;
             z-index: 2;
             padding: 20px;
             background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent white background */
             border-radius: 10px;
+            box-sizing: border-box;
+            width: 100%;
+            overflow: hidden;
         }
 
         .content {
@@ -112,50 +105,53 @@
             padding: 0;
         }
 
-        /* Settings button */
-        .settings-btn {
-            position: fixed;
-            top: 10px;
-            right: 10px;
-            background: url('settings.png') no-repeat center center;
-            background-size: cover;
-            width: 40px; /* Size of the button */
-            height: 40px; /* Size of the button */
-            border: none;
-            cursor: pointer;
-            z-index: 10;
+        .class-card {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 30px;
         }
 
-        /* Settings panel */
-        .settings {
-            position: fixed;
-            top: 50px;
-            right: 10px;
-            background: rgba(255, 255, 255, 0.8);
-            border: 1px solid #000;
-            border-radius: 5px;
+        .class-card .class-image {
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
             padding: 10px;
-            z-index: 10;
-            display: none; /* Hide by default */
+            width: 160px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-right: 20px;
         }
 
-        .settings label {
-            display: block;
-            margin: 5px 0;
+        .class-card img {
+            width: 150px;
+            height: auto;
+            border-radius: 10px;
         }
 
-        .settings input[type="range"] {
-            width: 100%;
-        }
-
-        .settings .contrast-toggle {
+        .class-name {
+            font-family: 'Lexend', sans-serif;
+            font-size: 1.2em;
+            color: #7df9ff;
+            text-align: center;
             margin-top: 10px;
+            width: 150px;
         }
 
-        .high-contrast {
-            background-color: #000;
-            color: #fff;
+        .class-info {
+            flex: 1;
+            padding: 10px 15px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            max-width: calc(75% - 180px);
         }
+
+        .class-info h2 {
+            font-family: 'Lexend', sans-serif;
+            font-size: 1.5em;
+            color: #01e8d4;
+            margin: 0 0 10px;
+        }
+
     </style>
 </head>
 <body>
