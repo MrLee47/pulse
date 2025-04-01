@@ -1,1 +1,265 @@
 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classes - Hunter</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Proxima+Nova&display=swap" rel="stylesheet">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Proxima Nova', sans-serif;
+            background-color: #d5f7f3; /* Light grey/desaturated seafoam green */
+            color: #000;
+        }
+
+        header {
+            width: 100%;
+            max-width: 1200px; /* Match the container max-width */
+            margin: 0 auto; /* Center the header */
+            padding: 20px;
+            background-color: #000000; /* Black background for header */
+            border-bottom: 5px solid #000000;
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        header h1 {
+            font-family: 'Lexend', sans-serif;
+            font-size: 3em;
+            color: #ffffff; /* Change text color to white */
+            margin: 0;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0;
+            height: calc(100vh - 80px); /* Adjust height to fit within viewport minus header */
+            box-sizing: border-box;
+        }
+
+        .sidebar {
+            width: 250px; /* Fixed width for sidebar */
+            padding: 20px;
+            background-color: #f0f0f0; /* Light grey */
+            border-right: 5px solid #000000;
+            box-sizing: border-box;
+            height: 100%;
+            overflow-y: auto; /* Add scrollbar if content overflows */
+        }
+
+        .sidebar img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        .sidebar a {
+            display: block;
+            margin: 10px 0; /* Add margin for separation */
+            padding: 10px 15px; /* Add padding for a button-like feel */
+            color: #000; /* Set link color to black */
+            text-decoration: none;
+            font-weight: bold;
+            font-family: 'Lexend', sans-serif;
+            background-color: #fff; /* White background for button */
+            border: 2px solid #000; /* Black border */
+            border-radius: 5px; /* Rounded corners */
+            transition: background-color 0.3s; /* Remove transition for color */
+        }
+
+        .sidebar a:hover {
+            background-color: #01e8d4; /* Change background color on hover */
+            /* No border color change on hover */
+        }
+
+        .main-content {
+            flex: 1;
+            padding: 20px;
+            background: url('bg.webp') no-repeat center center;
+            background-size: cover;
+            position: relative;
+            box-sizing: border-box;
+            overflow-y: auto;
+            color: #000;
+        }
+
+        .main-content .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5); /* Optional: Adds a dark overlay to improve text readability */
+            z-index: 1;
+        }
+
+        .main-content .content-wrapper {
+            position: relative;
+            z-index: 2;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent white background */
+            border-radius: 10px;
+        }
+
+        .content {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Hunter</h1>
+    </header>
+    <div class="container">
+        <div class="sidebar">
+            <img src="gg.jpg" alt="Banner">
+            <a href="index.html">Home</a>
+            <a href="classes.html">Classes</a>
+            <a href="origins.html">Origins</a>
+            <a href="items.html">Items</a>
+               <a href="prestige.html">Prestige</a>
+          </div>
+        <div class="main-content">
+            <div class="content-wrapper">
+                <h3>Health</h3>
+                <p><b>Health per Level:</b> 6 + Constitution </p> 
+                <p><b>Health Die:</b> 1d8 per Level</p>
+                <h3>Overwhelming Aura:</h3>
+                <p>When you choose this class once per turn as a Bonus Action you can force a number of creatures within 10 meters (33 ft) of you roll a Insight check against your Aura score. On a fail they gain the Fear condition until the end of your turn. Additionally you cannot be attacked during your turn.</p>
+                <h3>Power Strike:</h3>
+                <p>When you attack a creature with the Fear condition you can add twice your Power Score to the roll.</p>
+
+                <h3> 1st Level Traits </h3>
+                <p> <b> Bonebreaker</b> (Cost 1):</p>
+                <p> Type: Bonus Action </p>
+                <p> Once per turn you can expend a Bonus Action to make an unarmed strike. If it hits, the target is Stunned until the end of your turn.</p>
+
+                <p><b>Bullrush</b> (Cost 1):</p>
+                <p> Type: Main Action</p>
+                <p> You move up to your speed, if you end your turn within 2 meters (6 ft) of someone, you have a +2 advantage and immediately attack.</p>
+
+                <p><b>Armored Hammer</b> (Cost 2):</p>
+                <p> Type: Bonus Action</p>
+                <p> You can use a Bonus Action to move up to 10 meters (33 ft) and if you're attacked during this movement you can add 1d10 Explosive damage to your next attack this turn.
+</p>
+
+                <p><b> Very Ape</b> (Cost 1):</p>
+                <p> Type: Passive</p>
+                <p>When you use the Toss free action after a grab, you deal Physical damage equal to your Power score.</p>
+
+                   <p><b>Juggernaut</b> (Cost 1):</p>
+                <p> Type: Passive</p>
+                <p>You cannot be moved or get Knocked against your will.</p>
+
+                
+                   <p><b> Menace</b> (Cost 1):</p>
+                <p> Type: Passive</p>
+                <p>After you make an attack that kills or drops a creature to 0 health, you can choose someone within 10 meters (33 feet) to roll an Insight check against your Aura score. If they fail, they gain the Fear condition until the end of their next turn.
+</p>
+
+                  <p><b> Overpower</b> (Cost 2):</p>
+                <p> Type: Once per Encounter</p>
+                <p>When you make an attack you can choose to add a +5 to attack, and if the attack hits you knockdown the target.
+</p>
+
+              
+                  <p><b> Relentless Pursuit</b> (Cost 1):</p>
+                <p> Type: Passive</p>
+                <p>You can move through the space of other creatures.
+</p>  
+           <p><b> Rock Solid</b> (Cost 2):</p>
+                <p> Type: Passive</p>
+                <p>When a non-magical weapon hits you with a critical miss it cracks, causing it to has a Disadvantage of -2. If it gets to -10 the weapon breaks.
+</p>         
+                 <p><b> Thick Skin</b> (Cost 1):</p>
+                <p> Type: Passive</p>
+                <p>You gain 1 health now, and an additional 1 health each level.  </p>      
+<h3> 6th Level Traits</h3>
+                    <p><b> Brutal Taunt</b> (Cost 1):</p>
+                <p> Type: Bonus Action</p>
+                <p>As a Bonus Action you can cause all creatures within 10 meters (33 ft) of you to have a -3 disadvantage on attacks against people other than you. </p>  
+
+             <p><b> Bulwark of Fear</b> (Cost 1):</p>
+                <p> Type: Passive</p>
+                <p>When a creature misses you with an attack they must roll a Insight check against your Aura score or gain the Fear condition.
+ </p>  
+
+                
+             <p><b> Controlled Panic</b> (Cost 1):</p>
+                <p> Type: Bonus Action</p>
+                <p>As a Bonus Action you can choose a creature with the Fear effect and force it to move up to half your movement speed in a direction of your choice.
+ </p>  
+                 <p><b> Overbearing Advance</b> (Cost 1):</p>
+                <p> Type: Movement Action </p>
+                <p>You can move up to 5 meters (16 ft) ignoring attacks, and if you come in contact with another creature they take 1d8 + Power die in Physical damage. This ignores Armor. 
+ </p>  
+
+                            <p><b> Punishing Grasp</b> (Cost 1):</p>
+                <p> Type: Reaction </p>
+                <p>When a creature within 1 meter (3 ft) of you successfully attacks you, you can immediately Grab them as a Reaction.
+ </p> 
+                                            <p><b> Shatter</b> (Cost 1):</p>
+                <p> Type: Main Action </p>
+                <p>As your Main Action you can force everyone within 10 meters (33 ft) of you to become Knocked Additionally each creature gets attacked for 2d8 Physical damage. </p> 
+
+                
+                                <p><b>Rebel Yell</b> (Cost 1):</p>
+                <p> Type: Main Action </p>
+                <p>For the next 30 seconds all creatures of your choice within 10 meters (33 feet) have disadvantage on Insight checks. </p> 
+
+                <h3> 13th Level Traits</h3>
+
+                
+                
+                                <p><b>  Focused Fury</b> (Cost 2):</p>
+                <p> Type: Once per Encounter </p>
+                <p>You form a massive ball of energy in your hand as your Main Action. Any creature with 3 meters (9 ft) of you take 4d10 + your Aura die in Explosive damage. Additionally, if they have the Fear effect you can add your Power Score.
+ </p> 
+
+                         
+                                <p><b>  Meteoric Impact</b> (Cost 2):</p>
+                <p> Type: Once per Encounter </p>
+                <p>Choose a creature within 10 meters (33 ft). Using your Main Action you can launch yourself towards them attacking for 4d6 + your Power die in Explosive damage. If the creature has the Fear effect you can add your Power Score to the attack.
+</p> 
+
+                                                <p><b>  Siesmic Stomp</b> (Cost 2):</p>
+                <p> Type: Bonus Action </p>
+                <p>You can Jump as a Bonus Action, then when you land all creatures within 10 ft are attacked for 2d4 Physical damage.
+ </p> 
+
+               
+                                                <p><b> Devastating Dark Destructive Deadly Cleave</b> (Cost 2):</p>
+                <p> Type: Main Action </p>
+                <p>Make a melee attack against a creature within 10 ft. They take 2d10 Explosive and 1d10 Void damage. Any creature within 2 meters of that creature also takes the damage, and then within 2 meters of those creatures, etcetera. It does not target you, and can never hit the same creature twice.
+ </p>  
+            
+                    <p><b>  Wrecking Ball</b> (Cost 1):</p>
+                <p> Type: Passive </p>
+                <p>When you use a melee attack against a construct or solid material, and roll the max on damage, the construct is destroyed.
+ </p>  
+                                <h3> 17th Level Traits</h3>
+                         <p><b>Cataclysmic Strike</b> (Cost 4):</p>
+                <p> Type: Once per Encounter </p>
+                <p>Once per Encounter you can replace an attack with a Punt. This does your normal attack damage, but knocks the target 3 meters (9 ft) into the air. It remains there and gains the Stunned effect for 10 seconds if the attack hits. At any point while the creature is Stunned, without using an action or Reaction, you can then hit it with a Cataclysmic Strike. It deals 8d10 Physical damage, and knocks the creature 5 kilometers (1640 ft) into the air in a direction of your choice.
+ </p>  
+                         <p><b>  Color of the Supreme King</b> (Cost 4):</p>
+                <p> Type: Bonus Action </p>
+                <p>As a Bonus Action you can choose any number of creatures who have the Fear effect inflicted on them and Stun them for 20 seconds. You can also use this as a Reaction when a creature within sight gains the Fear effect. You cannot use this on a creature who has the Stunned effect already.
+ </p>  
+                         <p><b>Walk</b> (Cost 3):</p>
+                <p> Type: Main Action </p>
+                <p>Choose a creature within sight as your Main Action. The creature must have the Fear effect. That creature must immediately spend both actions on its next turn to run as far as it possibly can from you. </p>  
+            </div>
+        </div>
+    </div>
+</body>
+</html>
