@@ -131,7 +131,7 @@
                 <p><b>Health per Level:</b> 6 + Constitution </p> 
                 <p><b>Health Die:</b> 1d6 per Level</p>
                 <h3>Sharp Stealth:</h3>
-                <p>When you choose this class, you can hide as part of any movement action. Additionally, when you deal damage with a weapon you can immediately take another Movement Action. You may only use this up to twice on your turn, or up to 5 times at level 15.</p>
+                <p>When you choose this class, you can hide as part of any movement action. Additionally, when you deal damage with a weapon that is not a Greataxe or Greatsword, you can immediately take another Movement Action. You may only use this up to twice on your turn, or up to 5 times at level 15.</p>
                 <h3>Ghostly Dash:</h3>
                 <p>As a reaction to being attacked, you can add your Dexterity modifier to your Armor. If this allows you to dodge the attack your Speed is doubled on your next turn. Additionally, if you use a Movement Action on your turn your Armor increases by 2 until the start of your next turn.</p>
               
@@ -147,7 +147,7 @@
 
 <p><b>Go With the Flow</b> (Cost 1):</p>
 <p>Type: Movement Action</p>
-<p>You can automatically escape from a Grab or other non-magical shackles. You cannot automatically escape the Grab of a person with the Grappler Fighting Style.</p>
+<p>You can automatically escape from a Grab or other non-magical shackles. You cannot automatically escape the Grab of a person with the Grappler Fighting Style or a Creature with a higher Power Score than your Dexterity Score.</p>
 
                 <p><b>Last Caress</b> (Cost 1):</p>
 <p>Type: Passive</p>
@@ -155,7 +155,7 @@
 
                 <p><b>National Acrobat</b> (Cost 1):</p>
 <p>Type: Passive</p>
-<p>You can run up walls when you use a Movement Action, but you can't remain on a wall for more than a round.</p>
+<p>You can run up walls when you use a Movement Action, but you can't remain on a wall for more than 10 seconds</p>
 
 <p><b>Points of Authority</b> (Cost 1):</p>
 <p>Type: Passive</p>
@@ -164,15 +164,15 @@
 
 <p><b>Shadow Strike</b> (Cost 2):</p>
 <p>Type: Movement Action</p>
-<p>If you are Hiding, you can move 5 meters (16 ft) and make an attack against a creature within range, adding 1d6 damage to the attack. If you have Sharp Stealth, you can move your full speed when using this.</p>
+<p>If you are Hiding when you use this, you can move 5 meters (16 ft) and make an attack against a creature within range, adding 1d6 damage to the attack. If you have Sharp Stealth, you can move your full speed when using this.</p>
 
 <p><b>Silent Takedown</b> (Cost 1):</p>
 <p>Type: Bonus Action</p>
 <p>While you have a creature Grabbed, you can use a Bonus Action to incapacitate the creature as long as its Constitution is less than your Power.</p>
 
-<p><b>Tactical Thinking</b> (Cost 1):</p>
+<p><b>Tactical Thinking</b> (Cost 2):</p>
 <p>Type: Bonus Action</p>
-<p>You can now Disengage, Dodge, or Help as a Bonus Action rather than a Main Action.</p>
+<p>You can now Aid, Disengage, or Dodge as a Bonus Action rather than a Main Action.</p>
 
 <p><b>Talk to the Wind</b> (Cost 1):</p>
 <p>Type: Passive</p>
@@ -186,7 +186,7 @@
 
 <p><b>Careless Whisper</b> (Cost 2):</p>
 <p>Type: Bonus Action</p>
-<p>You can use your Bonus Action to make your next attack silently. If it kills the creature, your position isn't revealed. Otherwise, your position is still revealed, but you can immediately take another Hide action.</p>
+<p>You can use your Bonus Action to make your next attack silently. If it kills the creature, your position isn't revealed. Otherwise, your position is still revealed, but you can immediately take another Hide action as a Free Action.</p>
 
 <p><b>Never Meant to Know</b> (Cost 1):</p>
 <p>Type: Movement Action</p>
@@ -196,11 +196,11 @@
 <p>Type: Passive</p>
 <p>If you fail a check to resist damage from an effect, you only take half the damage.</p>
 
-<p><b>No Surprises</b> (Cost 1):</p>
+<p><b>No Surprises</b> (Cost 2):</p>
 <p>Type: Passive</p>
 <p>You can't be Ambushed, gain a +3 advantage on all Perception and Insight checks, and have a +3 advantage on attacks made as a Reaction.</p>
 
-<p><b>Quick Fingered</b> (Cost 1):</p>
+<p><b>Quick Fingered</b> (Cost 2):</p>
 <p>Type: Passive</p>
 <p>You have a +3 advantage on checks made to disarm a trap or open a lock.</p>
 
@@ -212,7 +212,7 @@
 
 <p><b>Bait and Switch</b> (Cost 1):</p>
 <p>Type: Movement Action</p>
-<p>Using your Movement Action, you can give a creature within sight a -2 disadvantage on their next attack.</p>
+<p>Using a Movement Action, you can give a creature within sight a -2 disadvantage on their next attack.</p>
 
 <p><b>Circadian Rhythms</b> (Cost 2):</p>
 <p>Type: Passive</p>
@@ -222,7 +222,7 @@
 <p>Type: Reaction</p>
 <p>When a creature hits you with an attack, you can use your Bonus Action to Disarm them if they are within range. You can roll either a Power or Dexterity check against their Power score, and on a success, you can take their weapon and may immediately throw it as part of the same Reaction or keep it.</p>
 
-<p><b>Gadgeteer</b> (Cost 1):</p>
+<p><b>Gadgeteer</b> (Cost 2):</p>
 <p>Type: Bonus Action</p>
 <p>You can use items as a Bonus Action rather than a Main Action.</p>
 
@@ -236,13 +236,13 @@
 <p>Type: Bonus Action</p> 
 <p>You can instantly steal a non-magical item from a creature within 30 feet without them noticing. The item must be something they could reasonably have on their person. This ability can be used once per creature.</p> 
 
-                <p><b>Nerve Strike</b> (Cost 3):</p> 
+                <p><b>Nerve Strike</b> (Cost 4):</p> 
 <p>Type: Once per Encounter</p> 
-<p>You can make a melee attack against a creature. On a hit, the creature must make a Constitution check against your Dexterity Score. On a failed save, the creature is stunned for 30 seconds.</p> 
+<p>You can make a melee attack against a creature. On a hit, the creature must make a Constitution check against your Dexterity Score. On a failed save, the creature Stunned for 30 seconds.</p> 
 
-<p><b>One with the Shadows</b> (Cost 3):</p> 
+<p><b>One with the Shadows</b> (Cost 4):</p> 
 <p>Type: Passive</p> 
-<p>You can remain hidden even when you take an action to move or attack. You can reveal yourself as a free action at any time, to specific creatures only if you wish.</p>
+<p>You can remain hidden even when you take an action to move or attack. You can reveal yourself without an action at any time, even to only specific creatures if you wish.</p>
                 
                 
             </div>
